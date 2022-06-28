@@ -1,10 +1,9 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 
 body {
-  // font-family: $primary-font;
-  // color: $primary-text-color;
-  // background-color: $site-background-color;
-  // letter-spacing: 0.03em;
+  font-family: $main-font;
+  color: $text-color;
+  background-color: #ffb8ca; //$white;
 
   &.no-scroll {
     @include breakpointTo(desktop) {
@@ -39,9 +38,9 @@ ol {
 }
 
 .container {
-  padding-left: 15px;
-  padding-right: 15px;
-  max-width: 1200px;
+  padding-left: 20px;
+  padding-right: 20px;
+  max-width: 1280px;
   margin: 0 auto;
 
   @include breakpointFrom(mobile) {
@@ -68,4 +67,22 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   margin: -1px;
+}
+
+.button {
+  display: inline-block;
+  height: 44px;
+  padding-right: 35px;
+  padding-left: 35px;
+  font-size: 16px;
+
+  color: $brand-color;
+  background-color: $white;
+  border-radius: 20px;
+  border: none;
+}
+
+.button--accent {
+  color: $white;
+  background-color: $brand-color;
 }
