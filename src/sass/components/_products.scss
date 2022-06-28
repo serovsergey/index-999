@@ -4,9 +4,7 @@
 }
 
 .products__label {
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
+    font-family: $brand-font;
     font-size: 18px;
     line-height: 1.17;
     text-align: center;
@@ -16,8 +14,7 @@
 }
 
 .products__title {
-    font-family: 'Titan One';
-    font-style: normal;
+    font-family: $brand-font;
     font-weight: 400;
     font-size: 34px;
     line-height: 1.15;
@@ -48,8 +45,8 @@
 }
 
 .products-item__title {
-    font-family: 'Titan One';
-    font-style: normal;
+    position: relative;
+    font-family: $brand-font;
     font-weight: 400;
     font-size: 20px;
     line-height: 1.15;
@@ -59,11 +56,35 @@
     color: $white;
 
     margin-bottom: 70px;
+
+    &::before {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 20px;
+        width: 280px;
+        height: 280px;
+        content: "";
+        display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &--ice::before {
+        background-image: url(../../images/products/icecream1x-mobile.png);
+    }
+
+    &--coffee::before {
+        background-image: url(../../images/products/icecoffee1x-mobile.png);
+    }
+
+    &--milk::before {
+        background-image: url(../../images/products/milkshake1x-mobile.png);
+    }
 }
 
 .products-item__text {
-    font-family: 'DM Sans';
-    font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.52;
@@ -74,11 +95,18 @@
     margin-bottom: 32px;
 }
 
-.button {
+.button--round {
     display: block;
     width: 40px;
     height: 40px;
     border-radius: 50%;
     border: none;
     margin: 0 auto;
+    padding: 0;
+}
+
+.button-arrow {
+    width: 10px;
+    height: 10px;
+    fill: $bg-cafe;
 }
