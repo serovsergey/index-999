@@ -1,112 +1,111 @@
 .products {
-    padding-top: 80px;
-    padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .products__label {
-    font-family: $brand-font;
-    font-size: 18px;
-    line-height: 1.17;
-    text-align: center;
-    text-transform: uppercase;
-    color: $brand-accent;
-    margin-bottom: 15px;
+  font-family: $brand-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand-accent;
+  margin-bottom: 15px;
 }
 
 .products__title {
-    font-family: $brand-font;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $brand-color;
+  font-family: $brand-font;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $brand-color;
 
-    padding-bottom: 148px;
-
+  padding-bottom: 148px;
 }
 
 .products__list {
-    @include breakpointFrom(tablet) {
-        display: flex;
-    }
+  @include breakpointFrom(tablet) {
+    display: flex;
+  }
 }
 
 .products-item {
-    background: $bg-color;
-    border-radius: 24px;
-    padding: 160px 40px 40px;
-    height: 490px;
+  background: $bg-color;
+  border-radius: 24px;
+  padding: 160px 40px 40px;
+  height: 490px;
 
-    &:not(:last-child) {
-        margin-bottom: 140px;
-    }
+  &:not(:last-child) {
+    margin-bottom: 140px;
+  }
 }
 
 .products-item__title {
-    position: relative;
-    font-family: $brand-font;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $white;
+  position: relative;
+  font-family: $brand-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
 
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 
-    &::before {
-        position: absolute;
-        bottom: 100%;
-        left: 50%;
-        transform: translateX(-50%);
-        margin-bottom: 20px;
-        width: 280px;
-        height: 280px;
-        content: "";
-        display: inline-block;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
+  &::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    width: 280px;
+    height: 280px;
+    content: '';
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
-    &--ice::before {
-        background-image: url(../../images/products/icecream1x-mobile.png);
-    }
+  &--ice::before {
+    background-image: url('../images/products/icecream1x-mobile.png');
+  }
 
-    &--coffee::before {
-        background-image: url(../../images/products/icecoffee1x-mobile.png);
-    }
+  &--coffee::before {
+    background-image: url('../images/products/icecoffee1x-mobile.png');
+  }
 
-    &--milk::before {
-        background-image: url(../../images/products/milkshake1x-mobile.png);
-    }
+  &--milk::before {
+    background-image: url('../images/products/milkshake1x-mobile.png');
+  }
 }
 
 .products-item__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $white;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .button--round {
-    display: block;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    margin: 0 auto;
-    padding: 0;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 auto;
+  padding: 0;
 }
 
 .button-arrow {
-    width: 10px;
-    height: 10px;
-    fill: $bg-cafe;
+  width: 10px;
+  height: 10px;
+  fill: $bg-cafe;
 }
