@@ -3,7 +3,7 @@
 body {
   font-family: $main-font;
   color: $text-color;
-  background-color: #ffb8ca; //$white;
+  background-color: $white;
 
   &.no-scroll {
     @include breakpointTo(desktop) {
@@ -74,7 +74,9 @@ ol {
   height: 44px;
   padding-right: 35px;
   padding-left: 35px;
-  font-size: 16px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
 
   color: $brand-color;
   background-color: $white;
@@ -82,7 +84,52 @@ ol {
   border: none;
 }
 
+.button:hover,
+.button:focus {
+  background-color: $hover-bg-color;
+}
+
 .button--accent {
   color: $white;
   background-color: $brand-color;
+}
+
+.button--alternate {
+  color: $white;
+  background-color: $alternate-accent-color;
+}
+
+.button--accent:hover,
+.button--accent:focus {
+  background-color: $hover-bg-accent-color;
+}
+
+.button--bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.social-link {
+  display: inline-flex;
+  width: 34px;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  background-color: $social-bg-color;
+  color: $white;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: makeTransition(background-color);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: $brand-color;
+}
+
+.social-link__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: makeTransition(fill);
 }
