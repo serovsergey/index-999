@@ -72,15 +72,15 @@
     }
 
     &--ice::before {
-        background-image: url(../../images/products/icecream1x-mobile.png);
+        background-image: url("../images/products/icecream1x-mobile.png");
     }
 
     &--coffee::before {
-        background-image: url(../../images/products/icecoffee1x-mobile.png);
+        background-image: url("../images/products/icecoffee1x-mobile.png");
     }
 
     &--milk::before {
-        background-image: url(../../images/products/milkshake1x-mobile.png);
+        background-image: url("../images/products/milkshake1x-mobile.png");
     }
 }
 
