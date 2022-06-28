@@ -1,0 +1,2 @@
+(()=>{const e={menuBtn:document.querySelector("[data-menu-button]"),mobileMenu:document.querySelector("[data-menu]")};e.menuBtn&&e.menuBtn.addEventListener("click",(function(){const t="true"==e.menuBtn.getAttribute("aria-expanded")|!1;e.menuBtn.classList.toggle("is-open"),e.menuBtn.setAttribute("aria-expanded",!t),e.mobileMenu.classList.toggle("is-open"),document.body.classList.toggle("no-scroll")}))})();
+//# sourceMappingURL=index.bfff0c19.js.map
