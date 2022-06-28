@@ -1,0 +1,71 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  // font-family: $primary-font;
+  // color: $primary-text-color;
+  // background-color: $site-background-color;
+  // letter-spacing: 0.03em;
+
+  &.no-scroll {
+    @include breakpointTo(desktop) {
+      overflow: hidden;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include breakpointFrom(mobile) {
+    width: 320px;
+  }
+
+  @include breakpointFrom(tablet) {
+    width: 768px;
+  }
+
+  @include breakpointFrom(desktop) {
+    width: 1200px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
