@@ -1,0 +1,56 @@
+.contacts__group {
+    display: flex;
+}
+
+.contacts-card {
+    &__title {
+        display: block;
+        padding: 8px 17px;
+        background-color: $bg-cafe;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.86;
+        letter-spacing: 0.04em;
+        color: $white;
+        text-align: center;
+
+    }
+    &__city {
+
+    }
+    &__description {
+
+    }
+}
+.shedule {
+    &__parts {
+
+    }
+    &__days {
+
+    }
+    &__time {
+
+    }
+}
+.adress {
+    &__link {
+
+    }
+    &__number {
+
+    }
+    &__mail {
+
+    }
+}
+
+.help-button {
+    &__location {
+
+    }
+    &__franchise {
+
+    }
+}
