@@ -1,62 +1,18 @@
-<<<<<<< Updated upstream
-.contacts__group {
-    display: flex;
-}
-
-.contacts-card {
-    &__title {
-        display: block;
-        padding: 8px 17px;
-        background-color: $bg-cafe;
-
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.86;
-        letter-spacing: 0.04em;
-        color: $white;
-        text-align: center;
-
-    }
-    &__city {
-
-    }
-    &__description {
-
-    }
-}
-.shedule {
-    &__parts {
-
-    }
-    &__days {
-
-    }
-    &__time {
-
-    }
-}
-=======
 .contacts {
     background-color: $bg-light;
-    
-    &__container {
-        padding-bottom: 48px;
-    }
-
     &__group {
         display: flex;
         flex-direction: column;
         justify-content: center;
         position: relative;
-        margin-bottom: 32px;
     }
-    
+
     &-card {
         padding: 40px 32px;
         background: $white;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
-        &__title {
+        &__class {
             display: inline-block;
             padding: 0 25px;
             margin-bottom: 20px;
@@ -65,8 +21,8 @@
             text-align: center;
             border-radius: 4px;    
         }
-
-        .contacts-card:nth-child(2n) &__title {
+        
+        .contacts-card:nth-child(2n) &__class{
             background-color: $bg-green;
         }
 
@@ -76,35 +32,90 @@
         }
 
         &__description {
-            line-height: 1.5;
             color: $subtext-color;
             margin-bottom: 24px;
+            line-height: 1.5;
+            letter-spacing: normal;
         }
-    }
-
-    &-card:not(:last-child) {
-            margin-bottom: 20px;
     }
 }
 
 @include breakpointTo(tablet) {
   .contacts {
+    &__container {
+        padding-bottom: 40px;
+    }
     &__group {
         padding-top: 105px;
+        margin-bottom: 32px;
     }
     &-card:first-child {
         position: absolute;
-        top: -360px;
+        top: -352px;
     }
+    &-card:not(:last-child) {
+        margin-bottom: 20px;
+}
   }
 }
 
 @include breakpointFrom(tablet) {
+    .contacts {
+        height: 561px;
+        &__container {
+            position: relative;
+            padding-top: 477px;
+        }
+        &__group {
+            flex-direction: row;
+            position: absolute;
+            bottom: 84px;
 
+        }
+        &-card {
+            &__class {
+            font-size: 16px;
+            padding: 0 16px;
+            margin-bottom: 32px;
+            border-radius: 6px;
+            }
+            &__city {
+                margin-bottom: 12px;
+            }
+    
+            &__description {
+                line-height: 1.6;
+                margin-bottom: 32px;
+            }
+        }
+        &-card:not(:last-child) {
+            margin-right: 32px;
+    }
+    }
 }
+    
 
 @include breakpointFrom(desktop) {
-  
+    .contacts {
+        height: 690px;
+        &__container {
+            padding-top: 525px;
+        }
+        &__group {
+            bottom: 104px;
+
+        }
+        &-card {
+
+            &__city {
+                margin-bottom: 8px;
+            }
+    
+            &__description {
+                line-height: 1.8;
+            }
+        }
+    }
 }
 
 .shedule {
@@ -113,7 +124,7 @@
     border-top: 1px solid $quote-line-color;
     border-bottom: 1px solid $quote-line-color;
     padding: 24px 0;
-    &__parts {
+    &__parts:not(:last-child) {
         margin-bottom: 8px;
     }
     &__days {
@@ -124,50 +135,79 @@
     }
 }
 
->>>>>>> Stashed changes
 .adress {
     &__link {
-
+        border: 0;
     }
     &__number {
-<<<<<<< Updated upstream
-
-    }
-    &__mail {
-
-=======
         color: $subtext-color;
     }
     &__mail {
         color: $subtext-color;
->>>>>>> Stashed changes
     }
 }
 
 .help-button {
-<<<<<<< Updated upstream
-    &__location {
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__icon {
+        margin-left: 13px;
+        fill: transparent;
+        stroke: $brand-color;
     }
-    &__franchise {
-
-    }
-=======
-    text-align: center;
-    margin: 0 auto;
-
-&__franchise {
-    margin-top: 10px;
 }
 
-
+.alternate-button__icon {
+    margin-left: 8px;
+    fill: transparent;
+    stroke: $white;
 }
 
+@include breakpointTo(tablet) {
+    .help-button {
+        &__franchise:first-child {
+            padding: 0 17px;
+        }
+        &__franchise:last-child {
+            margin-top: 10px;
+            padding: 0 31px;
+        }
+    }
+}
 @include breakpointFrom(tablet) {
-
+    .shedule  {
+        margin-bottom: 32px;
+        padding: 32px 0;
+        &__parts {
+            margin-bottom: 12px;
+        }
+    }
+    
+    .help-button {
+        flex-direction: row;
+        &__icon {
+            margin-left: 13px;
+        }
+        &__franchise:first-child {
+            padding: 0 34px 0 30px;
+        }
+        &__franchise:last-child {
+            padding: 0 38px;
+            margin-left: 14.5px;
+        }
+    }
 }
 
-@include breakpointFrom(desktop) {
-  
->>>>>>> Stashed changes
+@include breakpointFrom(desktop) {   
+    .help-button {
+        &__franchise:first-child {
+            padding: 0 35px;
+        }
+        &__franchise:last-child {
+            padding: 0 39px;
+            margin-left: 15px;
+        }
+    }
 }
