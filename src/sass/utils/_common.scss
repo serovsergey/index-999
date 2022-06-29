@@ -110,7 +110,9 @@ ol {
 }
 
 .button--accent:hover,
-.button--accent:focus {
+.button--accent:focus,
+.button--alternate:hover,
+.button--alternate:focus {
   background-color: $hover-bg-accent-color;
 }
 
@@ -143,4 +145,21 @@ ol {
   height: 20px;
   fill: currentColor;
   transition: makeTransition(fill);
+}
+
+.contacts h2,
+.contacts p,
+.contacts a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  @include breakpointFrom(tablet) {
+  
+  }
+
+  @include breakpointFrom(desktop) {
+    
+  }
 }
