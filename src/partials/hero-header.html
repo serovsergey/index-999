@@ -1,13 +1,27 @@
 <section class="header">
-  <div class="container"> 
+  <div class="container">
     <div class="header__nav">
       <a href="#" class="logo headder__logo">
-        <img
-          src="./images/hero-header/logo2x.png"
-          alt="Логотип"
-          class="logo__img"
-          width="199"
-      /></a>
+        <picture>
+          <source
+            srcset="
+              ./images/hero-header/logo1x.png 1x,
+              ./images/hero-header/logo2x.png 2x
+            "
+            media="(min-width:1200px)" />
+
+          <source
+            srcset="
+              ./images/hero-header/logo1x.png 1x,
+              ./images/hero-header/logo2x.png 2x
+            "
+            media="(max-width: 1199px)" />
+          <img
+            src="./images/hero-header/logo2x.png"
+            alt="Логотип"
+            class="logo__img"
+            width="199" /></picture
+      ></a>
       <nav class="nav" data-menu id="menu-container">
         <ul class="nav__items">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
@@ -26,7 +40,7 @@
         </ul>
       </nav>
       <button
-        class="button__menu is-open"
+        class="button__menu"
         type="button"
         data-menu-button
         aria-controls="menu-container"
@@ -63,12 +77,29 @@
       </ul>
       <div class="header__product product">
         <div class="product__thumb">
-          <img
-            src="./images/hero-header/milk1x-tablet.png"
-            alt="Photo Milk"
-            class="product__img"
-            width="213"
-          />
+
+          <picture>
+            <source
+              srcset="
+              ./images/hero-header/milk1x-descktop.png 1x,
+                ./images/hero-header/milk2x-descktop.png 2x
+              "
+              media="(min-width:1200px)" />
+
+            <source
+              srcset="
+              ./images/hero-header/milk1x-tablet.png 1x,
+                ./images/hero-header/milk2x-tablet.png 2x
+              "
+              media="(max-width: 1199px)" />
+              <img
+              src="./images/hero-header/milk1x-tablet.png"
+              alt="Photo Milk"
+              class="product__img"
+              width="213"
+            /></picture
+        >
+
         </div>
 
         <div class="product__body">
