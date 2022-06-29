@@ -3,7 +3,7 @@
   position: relative;
   width: 100%;
 
-  @media screen and (max-width: 767px) {
+  @include breakpointTo(tablet) {
     overflow: hidden;
 
     background-image: url('../images/hero-header/icecream1x-header-mobile.png');
@@ -12,7 +12,7 @@
     background-position: right bottom;
   }
 
-  @media screen and (min-width: 768px) {
+  @include breakpointFrom(tablet) {
     overflow: hidden;
 
     background-image: url('../images/hero-header/girl1x-tablet.png'),
@@ -24,6 +24,7 @@
 
   @media screen and (min-width: 1200px) {
     overflow: hidden;
+    height: 100vh;
     background-image: url('../images/hero-header/girl1x-tablet.png'),
       url('../images/hero-header/icecream1x-header-descktop.png');
     background-repeat: no-repeat;
@@ -279,6 +280,7 @@
 
 .header__items {
   margin-bottom: 20px;
+
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: center;
@@ -288,8 +290,6 @@
   @media screen and (min-width: 1200px) {
     margin-bottom: 40px;
   }
-}
-.header__item {
 }
 
 .header__title {
@@ -304,13 +304,16 @@
   color: $white;
   margin-bottom: 20px;
 
-  @media screen and (max-width: 767px) {
-    max-width: 218px;
+  @media screen and (max-width: 1199px) {
+    font-size: 22px;
+
+    max-width: 162px;
   }
 
-  @media screen and (min-width: 768px) {
-    font-size: 22px;
-    max-width: 162px;
+  @media screen and (min-width: 1200px) {
+    font-size: 38px;
+    max-width: 277px;
+    margin-bottom: 24px;
   }
 
   &--accent {
@@ -324,14 +327,18 @@
 
     color: $brand-color;
 
-    @media screen and (min-width: 767px) {
+    @media screen and (min-width: 768px) {
       font-size: 34px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 55px;
     }
   }
 }
 
 .header__body .header__button {
-  display: inline;
+  display: inline-flex;
 
   align-items: center;
   justify-content: center;
@@ -346,12 +353,16 @@
   background-color: $brand-color;
   border-radius: 20px;
 
-  padding: 10px 15px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.2;
+  }
 }
 
 .header__body .header__button + .header__button {
   background-color: $white;
   color: $brand-color;
+
   margin-left: 8px;
 }
 
@@ -431,9 +442,15 @@
   }
 }
 
-.product__img {
-  display: block;
+.product__thumb {
+  width: 213px;
+
+  .product__img {
+    display: block;
+    object-fit: contain;
+  }
 }
+
 .product__body {
   width: 200px;
 
@@ -489,5 +506,7 @@
 
   border-left: 3px solid $brand-color;
 }
+
+// fixed bag
 
 // fixed bag
