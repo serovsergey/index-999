@@ -6,6 +6,8 @@
     btnFranchise: document.querySelector("[data-btn-franchise]"),
     backdrop: document.querySelector("[data-modal]"),
     btnCloseModal: document.querySelectorAll(".btn-close"),
+    divFranchise: document.querySelector(".franchise"),
+    divLocations: document.querySelector(".locations"),
   };
 
   if (refs.menuBtn)
@@ -17,6 +19,9 @@
     if (refs.btnFranchise)
       refs.btnFranchise.addEventListener('click', () => (refs.backdrop.setAttribute('data-modal', 'franchise')));
     refs.btnCloseModal.forEach(btn => (btn.addEventListener('click', () => (refs.backdrop.setAttribute('data-modal', '')))));
+    refs.backdrop.addEventListener('click', (e) => (refs.backdrop.setAttribute('data-modal', '')));
+    refs.divFranchise.addEventListener('click', (e) => (e.stopPropagation()));
+    refs.divLocations.addEventListener('click', (e) => (e.stopPropagation()));
   }
 
 
