@@ -1,33 +1,62 @@
 <section class="customer-reviews">
-  <!-- <picture>
-    <source
-      srcset="
-        ../images/custom-services/client11x-descktop.jpg 1x,
-        ../images/custom-services/client12x-descktop.jpg 2x
-      "
-      media="(min-width:1200px)"
-    />
-    <source
-      srcset="
-        ./images/team/person1-tablet.jpg    1x,
-        ./images/team/person1-tablet@2x.jpg 2x
-      "
-      media="(min-width:768px)"
-    />
-    <source
-      srcset="
-        ./images/team/person1-mobile.jpg    1x,
-        ./images/team/person1-mobile@2x.jpg 2x
-      "
-      media="(min-width:480px)"
-    />
-    <img
-      class="display-block stretchable"
-      src="./images/team/person1-mobile.jpg"
-      width="450"
-      alt="Улыбчивый чувак в очках"
-    />
-  </picture> -->
+  <div class="container">
+    <picture class="customer-reviews__photo">
+      <source
+        srcset="
+          ./images/custom-services/client11x-descktop.png 1x,
+          ./images/custom-services/client12x-descktop.png 2x
+        "
+        media="(min-width:1200px)"
+      />
+      <source
+        srcset="
+          ./images/custom-services/client11x-tablet.png 1x,
+          ./images/custom-services/client12x-tablet.png 2x
+        "
+        media="(min-width:768px)"
+      />
+      <source
+        srcset="
+          ./images/custom-services/client1x-mobile.png 1x,
+          ./images/custom-services/client2x-mobile.png 2x
+        "
+        media="(min-width:480px)"
+      />
+      <img
+        class=""
+        src="./images/custom-services/client11x-descktop.png"
+        width="85"
+        alt="Client Photo"
+      />
+    </picture>
 
-  <!-- <img src="../images/" alt="" class="customer-reviews__photo" /> -->
+    <div class="customer-reviews__quote-wrapper">
+      <div class="customer-reviews__quote">
+        Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam
+        sem. In hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis
+        in nibh vel risus.
+      </div>
+    </div>
+    <span class="customer-reviews__person">Emily, Los Angeles</span>
+    <div class="customer-reviews__pagination-wrapper">
+      <ul class="customer-reviews__pagination">
+        <li class="customer-reviews__item">
+          <a
+            href="/"
+            class="customer-reviews__link customer-reviews__link--current"
+          >
+            <svg class="customer-reviews__icon">
+              <use href="./images/symbol-defs.svg#icon-facebook-mobile"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="customer-reviews__item">
+          <a href="/" class="customer-reviews__link"></a>
+        </li>
+        <li class="customer-reviews__item">
+          <a href="/" class="customer-reviews__link"></a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>

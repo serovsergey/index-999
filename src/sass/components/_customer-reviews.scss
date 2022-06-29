@@ -1,0 +1,97 @@
+.customer-reviews {
+  padding-top: 40px;
+  padding-bottom: 24px;
+  text-align: center;
+  position: relative;
+
+  &__photo {
+    display: inline-block;
+    margin-bottom: 32px;
+  }
+
+  &__quote-wrapper {
+    // padding: 50px;
+    position: relative;
+    z-index: 1;
+    padding: 43px 50px 17px;
+    background-color: $quote-bg-color;
+    margin-bottom: 36px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: $hover-bg-accent-color;
+      filter: drop-shadow(10px 0px 0px $hover-bg-accent-color)
+        drop-shadow(-10px 0px 0px $hover-bg-accent-color);
+    }
+  }
+
+  &__quote {
+    padding-left: 15px;
+    position: relative;
+    padding-right: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 2.55;
+    text-align: center;
+    z-index: 0;
+    background: repeating-linear-gradient(
+      $quote-bg-color,
+      $quote-bg-color 26px,
+      $quote-line-color 27px,
+      $quote-bg-color 28px 31px
+    );
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 54px;
+      height: 40px;
+      top: -17px;
+      left: 6;
+      z-index: -1;
+      background-image: url('../images/custom-services/quotes.svg');
+    }
+  }
+
+  &__person {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.86;
+    margin-bottom: 16px;
+  }
+
+  &__pagination-wrapper {
+    // display: flex;
+  }
+
+  &__pagination {
+    display: inline-flex;
+    margin: 0 auto;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 18px;
+  }
+
+  &__link {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+  }
+
+  &__icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  &__link:not(&__link--current) {
+    background-color: #d9d9d9;
+    border-radius: 50%;
+  }
+}
