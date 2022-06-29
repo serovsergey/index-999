@@ -291,10 +291,10 @@
 .button__icon {
   width: 10px;
   height: 10px;
-
   margin-left: 15px;
+  fill: transparent;
 
-  fill: $brand-color;
+  stroke: $brand-color;
 }
 
 // Header-body
@@ -524,8 +524,6 @@
   align-items: center;
   justify-content: center;
 
-  padding-left: 3px;
-
   background-color: $white;
 
   @media screen and (min-width: 1200px) {
@@ -534,15 +532,7 @@
   }
 }
 .product__icon {
-  width: 5px;
-  height: 5px;
-
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-
-  border-left: 3px solid $brand-color;
+  width: 10px;
+  height: 10px;
+  fill: $brand-color;
 }
-
-// fixed bag
-
-// fixed bag
