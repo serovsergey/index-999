@@ -1,8 +1,22 @@
 .customer-reviews {
   padding-top: 40px;
   padding-bottom: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   position: relative;
+
+  &__container {
+    @include breakpointFrom(tablet) {
+      padding-left: 74px;
+      padding-right: 74px;
+    }
+
+    @include breakpointFrom(desktop) {
+      padding-left: 83px;
+      padding-right: 83px;
+    }
+  }
 
   &__photo {
     display: inline-block;
@@ -11,11 +25,28 @@
 
   &__quote-wrapper {
     // padding: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 43px;
+    padding-bottom: 26px;
     position: relative;
     z-index: 1;
-    padding: 43px 50px 17px;
     background-color: $quote-bg-color;
     margin-bottom: 36px;
+
+    @include breakpointFrom(tablet) {
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 37px;
+      padding-bottom: 36px;
+    }
+
+    @include breakpointFrom(desktop) {
+      padding-left: 105px;
+      padding-right: 105px;
+      padding-top: 37px;
+      padding-bottom: 36px;
+    }
 
     &::after {
       content: '';
@@ -25,8 +56,10 @@
       height: 4px;
       border-radius: 50%;
       background-color: $hover-bg-accent-color;
-      filter: drop-shadow(10px 0px 0px $hover-bg-accent-color)
-        drop-shadow(-10px 0px 0px $hover-bg-accent-color);
+      box-shadow: 10px 0px 0px $hover-bg-accent-color,
+        -10px 0px 0px $hover-bg-accent-color;
+      // filter: drop-shadow(10px 0px 0px $hover-bg-accent-color)
+      //   drop-shadow(-10px 0px 0px $hover-bg-accent-color);
     }
   }
 
@@ -35,6 +68,7 @@
     position: relative;
     padding-right: 8px;
     font-size: 12px;
+
     font-weight: 500;
     line-height: 2.55;
     text-align: center;
@@ -45,6 +79,34 @@
       $quote-line-color 27px,
       $quote-bg-color 28px 31px
     );
+
+    @include breakpointFrom(tablet) {
+      font-size: 14px;
+      line-height: 2.16;
+      letter-spacing: 0.04em;
+      padding-left: 45px;
+      padding-right: 50px;
+      background: repeating-linear-gradient(
+        $quote-bg-color,
+        $quote-bg-color 25px,
+        $quote-line-color 26px,
+        $quote-bg-color 27px 32px
+      );
+    }
+
+    @include breakpointFrom(desktop) {
+      font-size: 16px;
+      line-height: 1.86;
+      letter-spacing: 0.04em;
+      padding-left: 36px;
+      padding-right: 36px;
+      background: repeating-linear-gradient(
+        $quote-bg-color,
+        $quote-bg-color 26px,
+        $quote-line-color 27px,
+        $quote-bg-color 28px 31px
+      );
+    }
 
     &::before {
       content: '';
@@ -88,6 +150,7 @@
   &__icon {
     width: 12px;
     height: 12px;
+    fill: #d31342;
   }
 
   &__link:not(&__link--current) {
