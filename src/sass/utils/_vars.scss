@@ -1,15 +1,29 @@
 // Основной цвет шрифта, кнопок, логотипа
-$brand-color: #D41443;
-$brand-accent: #FFA5BA;
+$brand-color: #d41443;
+$brand-accent: #ffa5ba;
+$alternate-accent-color: #d41342;
 
 // Основной цвет бекграунда
-$bg-color: #FFB8CA;
-$bg-light: #FFF5F6;
-$bg-cafe: #F0D1A5;
-$bg-green: #C2E297;
-
+$bg-color: #ffb8ca;
+$bg-light: #fff5f6;
+$bg-cafe: #f0d1a5;
+$bg-green: #c2e297;
+$social-bg-color: #fea5bb;
+$hover-bg-color: #ecebeb;
+$hover-bg-accent-color: #c7133e;
+$quote-bg-color: #fafafa;
+$quote-line-color: #e1e1e1;
 
 // Основной текст описания
 $text-color: #000000;
-$subtext-color: #907E82;
+$subtext-color: #907e82;
 $white: #fff;
+
+// Font
+$main-font: 'DM Sans', sans-serif;
+$brand-font: 'Titan One', sans-serif;
+
+// Transition
+$transition-duration: 250ms;
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);
+$transition-style: $transition-duration $transition-function;

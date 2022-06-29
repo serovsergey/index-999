@@ -1,3 +1,115 @@
-<section class="hero-header">
-  header
+<section class="header">
+  <div class="container">
+    <div class="header__nav">
+      <a href="#" class="logo headder__logo">
+        <picture>
+          <source
+            srcset="
+              ./images/hero-header/logo1x.png 1x,
+              ./images/hero-header/logo2x.png 2x
+            "
+            media="(min-width:1200px)" />
+
+          <source
+            srcset="
+              ./images/hero-header/logo1x.png 1x,
+              ./images/hero-header/logo2x.png 2x
+            "
+            media="(max-width: 1199px)" />
+          <img
+            src="./images/hero-header/logo2x.png"
+            alt="Логотип"
+            class="logo__img"
+            width="199" /></picture
+      ></a>
+      <nav class="nav" data-menu id="menu-container">
+        <ul class="nav__items">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#about" class="nav__link">About us</a>
+          </li>
+          <li class="nav__item">
+            <a href="#made" class="nav__link">How it’s made?</a>
+          </li>
+          <li class="nav__item">
+            <a href="#products" class="nav__link">Our products</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contact" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button
+        class="button__menu"
+        type="button"
+        data-menu-button
+        aria-controls="menu-container"
+      >
+        <span class="button__line" aria-expanded="false"></span>
+      </button>
+      <button class="button button--bold">
+        Buy now
+        <svg class="button__icon" width="10">
+          <use href="./images/icons.svg#icon-bracket"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="header__body">
+      <ul class="header__items">
+        <li class="header__item">
+          <h1 class="header__title">
+            ice cream made with
+            <span class="header__title--accent">passion</span>
+          </h1>
+          <a href="#" class="button button--accent">Products</a>
+          <a href="#" class="button">How it’s made?</a>
+        </li>
+        <li class="header__item">
+          <div class="header__group">
+            <h2 class="header__number">16</h2>
+            <p class="header__text">cafes</p>
+          </div>
+          <div class="header__group">
+            <h2 class="header__number">23</h2>
+            <p class="header__text">food trucks</p>
+          </div>
+        </li>
+      </ul>
+      <div class="header__product product">
+        <div class="product__thumb">
+          <picture>
+            <source
+              srcset="
+                ./images/hero-header/milk1x-descktop.png 1x,
+                ./images/hero-header/milk2x-descktop.png 2x
+              "
+              media="(min-width:1200px)" />
+
+            <source
+              srcset="
+                ./images/hero-header/milk1x-tablet.png 1x,
+                ./images/hero-header/milk2x-tablet.png 2x
+              "
+              media="(max-width: 1199px)" />
+            <img
+              src="./images/hero-header/milk1x-tablet.png"
+              alt="Photo Milk"
+              class="product__img"
+              width="213"
+          /></picture>
+        </div>
+
+        <div class="product__body">
+          <p class="product__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <a href="#" class="button button--round">
+            <svg class="product__icon">
+              <use href="./images/icons.svg#icon-arrow-right-thick"></use></svg
+          ></a>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>

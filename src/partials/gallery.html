@@ -1,1 +1,33 @@
-<section class="gallery">gallery</section>
+<section class="gallery">
+  <h2 class="gallery_header">gallery</h2>
+  <picture>
+    <source
+      srcset="
+        ./images/gallery/collage1x-descktop.jpg 1x,
+        ./images/gallery/collage2x-descktop.jpg 2x
+      "
+      media="(min-width:1280px)"
+    />
+    <source
+      srcset="
+        ./images/gallery/collage1x-tablet.jpg 1x,
+        ./images/gallery/collage2x-tablet.jpg 2x
+      "
+      media="(min-width:768px)"
+    />
+    <source
+      srcset="
+        ./images/gallery/collage1x-mobile.jpg 1x,
+        ./images/gallery/collage2x-mobile.jpg 2x
+      "
+      media="(min-width:320px)"
+    />
+    <img
+      class="team-list__image"
+      width="364"
+      height="122"
+      src="./images/gallery/collage1x-mobile.jpg"
+      alt="gallery"
+    />
+  </picture>
+</section>

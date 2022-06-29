@@ -1,0 +1,206 @@
+.products {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.products__label {
+  font-family: $brand-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand-accent;
+  margin-bottom: 15px;
+}
+
+.products__title {
+  font-family: $brand-font;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $brand-color;
+
+  padding-bottom: 148px;
+}
+
+.products__list {
+  @include breakpointFrom(tablet) {
+    display: flex;
+  }
+}
+
+.products-item {
+  background: $bg-color;
+  border-radius: 24px;
+  padding: 160px 40px 40px;
+  height: 490px;
+
+  &:not(:last-child) {
+    @include breakpointTo(tablet) {
+      margin-bottom: 140px;
+    }
+  }
+
+  @include breakpointFrom(tablet) {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    & {
+      padding: 115px 32px 40px;
+    }
+  }
+
+  @include breakpointFrom(desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    & {
+      padding: 165px 75px 60px;
+    }
+
+  }
+
+
+}
+
+.products-item__title {
+  position: relative;
+  font-family: $brand-font;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white;
+
+  margin-bottom: 70px;
+
+  &::before {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    width: 280px;
+    height: 280px;
+    content: "";
+    display: inline-block;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &--ice::before {
+    background-image: url(../images/products/icecream1x-mobile.png);
+
+    @include breakpointDPR(2) {
+      background-image: url(../images/products/icecream2x-mobile.png);
+    }
+
+    @include breakpointFrom(tablet) {
+      background-image: url(../images/products/icecream1x-tablet.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/icecream2x-tablet.png);
+      }
+    }
+
+    @include breakpointFrom(desktop) {
+      background-image: url(../images/products/icecream1x-descktop.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/icecream2x-descktop.png);
+      }
+    }
+
+  }
+
+  &--coffee::before {
+    background-image: url(../images/products/icecoffee1x-mobile.png);
+
+    @include breakpointDPR(2) {
+      background-image: url(../images/products/icecoffee2x-mobile.png);
+    }
+
+    @include breakpointFrom(tablet) {
+      background-image: url(../images/products/icecoffee1x-tablet.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/icecoffee2x-tablet.png);
+      }
+    }
+
+    @include breakpointFrom(desktop) {
+      background-image: url(../images/products/icecoffee1x-descktop.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/icecoffee2x-descktop.png);
+      }
+    }
+  }
+
+  &--milk::before {
+    background-image: url(../images/products/milkshake1x-mobile.png);
+
+    @include breakpointDPR(2) {
+      background-image: url(../images/products/milkshake2x-mobile.png);
+    }
+
+    @include breakpointFrom(tablet) {
+      background-image: url(../images/products/milkshake1x-tablet.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/milkshake2x-tablet.png);
+      }
+    }
+
+    @include breakpointFrom(desktop) {
+      background-image: url(../images/products/milkshake1x-descktop.png);
+
+      @include breakpointDPR(2) {
+        background-image: url(../images/products/milkshake2x-descktop.png);
+      }
+    }
+  }
+
+  &::after {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: $white;
+    border-radius: 50%;
+    content: "";
+    display: inline-block;
+    filter: drop-shadow(10px 0px 0px $white) drop-shadow(-10px 0px 0px $white);
+  }
+}
+
+.products-item__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $white;
+
+  margin-bottom: 32px;
+}
+
+.button__products {
+  display: block;
+  margin: 0 auto;
+}
+
+.products__icon {
+  width: 17px;
+  height: 15px;
+  fill: $brand-color;
+}
