@@ -1,44 +1,6 @@
-<<<<<<< Updated upstream
-.contacts__group {
-    display: flex;
-}
-
-.contacts-card {
-    &__title {
-        display: block;
-        padding: 8px 17px;
-        background-color: $bg-cafe;
-
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 1.86;
-        letter-spacing: 0.04em;
-        color: $white;
-        text-align: center;
-
-    }
-    &__city {
-
-    }
-    &__description {
-
-    }
-}
-.shedule {
-    &__parts {
-
-    }
-    &__days {
-
-    }
-    &__time {
-
-    }
-}
-=======
 .contacts {
     background-color: $bg-light;
-    
+
     &__container {
         padding-bottom: 48px;
     }
@@ -50,7 +12,7 @@
         position: relative;
         margin-bottom: 32px;
     }
-    
+
     &-card {
         padding: 40px 32px;
         background: $white;
@@ -63,7 +25,7 @@
             background-color: $bg-cafe;
             color: $white;
             text-align: center;
-            border-radius: 4px;    
+            border-radius: 4px;
         }
 
         .contacts-card:nth-child(2n) &__title {
@@ -104,7 +66,7 @@
 }
 
 @include breakpointFrom(desktop) {
-  
+
 }
 
 .shedule {
@@ -124,35 +86,19 @@
     }
 }
 
->>>>>>> Stashed changes
 .adress {
     &__link {
 
     }
     &__number {
-<<<<<<< Updated upstream
-
-    }
-    &__mail {
-
-=======
         color: $subtext-color;
     }
     &__mail {
         color: $subtext-color;
->>>>>>> Stashed changes
     }
 }
 
 .help-button {
-<<<<<<< Updated upstream
-    &__location {
-
-    }
-    &__franchise {
-
-    }
-=======
     text-align: center;
     margin: 0 auto;
 
@@ -168,6 +114,5 @@
 }
 
 @include breakpointFrom(desktop) {
-  
->>>>>>> Stashed changes
+
 }
