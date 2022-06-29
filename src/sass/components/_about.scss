@@ -1,0 +1,50 @@
+.about {
+    background-color: $bg-light;
+    padding-top: 40px;
+}
+
+.about__label {
+    font-family: $brand-font;
+    font-size: 18px;
+    line-height: 1.17;
+    text-align: center;
+    text-transform: uppercase;
+    color: $brand-accent;
+    margin-bottom: 15px;
+}
+
+.about__block {
+    width: 220px;
+}
+
+.about__title {
+    font-family: $brand-font;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $brand-color;
+    margin-bottom: 32px;
+}
+
+.about__text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.62;
+    color: $text-color;
+    margin-bottom: 20px;
+
+    &--sub {
+        color: $subtext-color;
+    }
+}
+
+.button--about {
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+    width: 176px;
+    height: 44px;
+}
