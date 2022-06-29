@@ -1,0 +1,364 @@
+.header {
+  background-color: $bg-color;
+  position: relative;
+
+  @media screen and (max-width: 767px) {
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-image: url('../images/hero-header/icecream1x-header-mobile.png');
+    background-repeat: no-repeat;
+    background-size: 300px;
+    background-position: right bottom;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+
+    overflow: hidden;
+
+    background-image: url('../images/hero-header/icecream1x-header-descktop.png');
+    background-repeat: no-repeat;
+    background-size: 450px;
+    background-position: center bottom;
+  }
+}
+
+.header__nav {
+  padding-top: 8px;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+
+    padding-top: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-top: 37px;
+  }
+}
+
+.logo {
+}
+
+.headder__logo {
+}
+
+.nav {
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    padding: 20px;
+
+    padding-top: 123px;
+
+    background-color: #e17992;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+
+    &.is-open {
+      transform: translateX(0);
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+
+    padding: 20px;
+
+    padding-top: 123px;
+
+    background-color: #e17992;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in;
+
+    &.is-open {
+      transform: translateX(50%);
+    }
+  }
+}
+
+.nav__items {
+  @media screen and (max-width: 1199px) {
+    padding-top: 123px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.nav__item {
+  margin-right: 35px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  @media screen and (max-width: 1199px) {
+    padding: 12px 20px;
+    border-top: 1px solid #e18298;
+    border-bottom: 1px solid #e18298;
+  }
+}
+
+.nav__link {
+  display: block;
+  font-family: 'DM Sans';
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.2;
+
+  color: $white;
+
+  &:hover {
+    color: $brand-color;
+  }
+
+  @media screen and (max-width: 1199px) {
+    padding: 12px 20px;
+  }
+}
+
+.button__menu {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    border: none;
+    width: 20px;
+    height: 12px;
+
+    padding: 0;
+    background-color: transparent;
+
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: relative;
+    margin-left: auto;
+    margin-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
+
+  .button__line {
+    display: block;
+    position: relative;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: $brand-color;
+
+    transition: all 0.4s ease-in;
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 20px;
+      height: 1px;
+
+      background-color: $brand-color;
+
+      transition: all 0.4s;
+    }
+
+    &::before {
+      content: '';
+      top: -6px;
+      left: 0;
+    }
+
+    &::after {
+      content: '';
+
+      bottom: -6px;
+      left: 0;
+    }
+  }
+}
+
+.button__menu:hover {
+  .button__line::before {
+    content: '';
+    top: 0;
+
+    transform: rotate(45deg);
+    background-color: $white;
+  }
+
+  .button__line::after {
+    content: '';
+    transform: rotate(-45deg);
+    bottom: 0;
+    background-color: $white;
+  }
+}
+
+.button.nav__button {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+  color: $brand-color;
+
+  background-color: $white;
+  border-radius: 22px;
+  border: none;
+  padding: 0 48px;
+
+  cursor: pointer;
+  transition: transform 0.4s ease-in;
+
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: inline-block;
+
+    display: none;
+
+    .nav.is-open {
+      display: block;
+    }
+  }
+}
+
+.button__icon {
+  width: 10px;
+  height: 10px;
+
+  margin-left: 15px;
+
+  fill: $brand-color;
+}
+
+.header__body {
+  padding-top: 136px;
+  padding-bottom: 158px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 10px;
+  }
+}
+.header__items {
+}
+.header__item {
+}
+
+.header__title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $white;
+  margin-bottom: 20px;
+
+  @media screen and (max-width: 767px) {
+    max-width: 218px;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 22px;
+    max-width: 162px;
+  }
+
+  &--accent {
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 96.5%;
+
+    text-transform: uppercase;
+
+    color: $brand-color;
+
+    @media screen and (min-width: 767px) {
+      font-size: 34px;
+    }
+  }
+}
+
+.header__body .header__button {
+  display: inline;
+
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.1;
+  color: $white;
+
+  background-color: $brand-color;
+  border-radius: 20px;
+
+  padding: 10px 15px;
+}
+
+.header__body .header__button + .header__button {
+  background-color: $white;
+  color: $brand-color;
+  margin-left: 8px;
+}
+
+.header__group {
+  display: none;
+}
+.header__number {
+}
+.header__text {
+}
+.header__product {
+}
+.product {
+  display: none;
+}
+.product__img {
+}
+.product__body {
+}
+.product__text {
+}
+.product__link {
+}
+.product__icon {
+}
+
+// fixed bag

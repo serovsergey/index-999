@@ -1,36 +1,35 @@
 .products {
-    padding-top: 80px;
-    padding-bottom: 40px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
 .products__label {
-    font-family: $brand-font;
-    font-size: 18px;
-    line-height: 1.17;
-    text-align: center;
-    text-transform: uppercase;
-    color: $brand-accent;
-    margin-bottom: 15px;
+  font-family: $brand-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+  color: $brand-accent;
+  margin-bottom: 15px;
 }
 
 .products__title {
-    font-family: $brand-font;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
-    color: $brand-color;
+  font-family: $brand-font;
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $brand-color;
 
-    padding-bottom: 148px;
-
+  padding-bottom: 148px;
 }
 
 .products__list {
-    @include breakpointFrom(tablet) {
-        display: flex;
-    }
+  @include breakpointFrom(tablet) {
+    display: flex;
+  }
 }
 
 .products-item {
@@ -124,14 +123,14 @@
 }
 
 .products-item__text {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.52;
-    text-align: center;
-    letter-spacing: 0.04em;
-    color: $white;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: $white;
 
-    margin-bottom: 32px;
+  margin-bottom: 32px;
 }
 
 .button--round {

@@ -2,11 +2,15 @@
   <div class="container">
     <div class="header__nav">
       <a href="#" class="logo headder__logo">
-        <img src="#" alt="Логотип" class="logo__img" width="199"
-      /></a>
-      <nav class="nav">
+        <img
+          src="./images/hero-header/logo2x.png"
+          alt="Логотип"
+          class="logo__img"
+          width="199"
+      /></a>  
+      <nav class="nav" data-menu id="menu-container">
         <ul class="nav__items">
-          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li  class="nav__item"><a href="#home" class="nav__link">Home</a></li>
           <li class="nav__item">
             <a href="#about" class="nav__link">About us</a>
           </li>
@@ -20,23 +24,31 @@
             <a href="#contact" class="nav__link">Contact</a>
           </li>
         </ul>
-      </nav> -->
-      <button class="button__menu"><span class="button__line"></span></button>
+      </nav>
+      <button
+        class="button__menu is-open"
+        type="button"
+        data-menu-button
+        aria-controls="menu-container"
+      >
+        <span class="button__line" aria-expanded="false"></span>
+      </button>
       <button class="button nav__button">
         Buy now
-        <svg class="button__icon">
+        <svg class="button__icon" width="10">
           <use href="#"></use>
         </svg>
       </button>
     </div>
-     <div class="header__body">
+    <div class="header__body">
       <ul class="header__items">
         <li class="header__item">
           <h1 class="header__title">
-            ice cream made with <span class="header__title--accent">passion</span>
-            <a href="#" class="header__button button">Products</a>
-            <a href="#" class="header__button button">How it’s made?</a>
+            ice cream made with
+            <span class="header__title--accent">passion</span>
           </h1>
+          <a href="#" class="header__button button">Products</a>
+          <a href="#" class="header__button button">How it’s made?</a>
         </li>
         <li class="header__item">
           <div class="header__group">
@@ -51,12 +63,16 @@
       </ul>
 
       <div class="header__product product">
-        <img src="#" alt="Photo Milk" class="product__img" width="152">
+        <img src="#" alt="Photo Milk" class="product__img" width="152" />
         <div class="product__body">
-          <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-          <a href="#" class="product__link"> <svg class="product__icon">
-            <use></use>
-          </svg></a>
+          <p class="product__text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <a href="#" class="product__link">
+            <svg class="product__icon">
+              <use href="#"></use></svg
+          ></a>
         </div>
       </div>
     </div>
