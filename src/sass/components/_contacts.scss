@@ -1,47 +1,46 @@
 .contacts {
-    background-color: $bg-light;
+  background-color: $bg-light;
 
-    &__container {
-        padding-bottom: 48px;
+  &__container {
+    padding-bottom: 48px;
+  }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  &-card {
+    padding: 40px 32px;
+    background: $white;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+    &__title {
+      display: inline-block;
+      padding: 0 25px;
+      margin-bottom: 20px;
+      background-color: $bg-cafe;
+      color: $white;
+      text-align: center;
+      border-radius: 4px;
     }
 
-    &__group {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 32px;
+    .contacts-card:nth-child(2n) &__title {
+      background-color: $bg-green;
     }
 
-    &-card {
-        padding: 40px 32px;
-        background: $white;
-        box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-        border-radius: 24px;
-        &__title {
-            display: inline-block;
-            padding: 0 25px;
-            margin-bottom: 20px;
-            background-color: $bg-cafe;
-            color: $white;
-            text-align: center;
-            border-radius: 4px;
-        }
+    &__city {
+      color: $text-color;
+      margin-bottom: 8px;
+    }
 
-        .contacts-card:nth-child(2n) &__title {
-            background-color: $bg-green;
-        }
-
-        &__city {
-            color: $text-color;
-            margin-bottom: 8px;
-        }
-
-        &__description {
-            line-height: 1.5;
-            color: $subtext-color;
-            margin-bottom: 24px;
-        }
+    &__description {
+      line-height: 1.5;
+      color: $subtext-color;
+      margin-bottom: 24px;
     }
   }
 
@@ -66,7 +65,6 @@
 }
 
 @include breakpointFrom(desktop) {
-
 }
 
 .shedule {
@@ -87,7 +85,6 @@
 }
 
 .adress {
-
   &__link {
   }
   &__number {
@@ -102,7 +99,6 @@
   text-align: center;
   margin: 0 auto;
 
-
   &__franchise {
     margin-top: 10px;
   }
@@ -112,5 +108,4 @@
 }
 
 @include breakpointFrom(desktop) {
-
 }
