@@ -44,10 +44,6 @@
     }
   }
 
-  &-card:not(:last-child) {
-    margin-bottom: 20px;
-  }
-}
 
 @include breakpointTo(tablet) {
   .contacts {
