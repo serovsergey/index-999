@@ -3,7 +3,6 @@
 .header {
   background-color: $bg-color;
   position: relative;
-  width: 100%;
 
   @include breakpointTo(tablet) {
     overflow: hidden;
@@ -84,9 +83,11 @@
 // Navigation menu
 
 .nav {
-  transition: makeTransition(opacity);
+  transition: makeTransition(opacity, color);
+
   @media screen and (max-width: 767px) {
     position: absolute;
+    z-index: 2;
     top: 0;
     left: 0;
     width: 100%;
@@ -115,10 +116,15 @@
     background-color: #e17992;
 
     transform: translateX(100%);
-    transition: transform 0.4s ease-in;
+    transition: makeTransition(transform);
 
     &.is-open {
       transform: translateX(50%);
+      + .button__menu {
+        position: absolute;
+        top: 20px;
+        right: 35px;
+      }
     }
   }
 }
@@ -159,6 +165,8 @@
 
   color: $white;
 
+  transition: makeTransition(color);
+
   &:hover {
     color: $brand-color;
   }
@@ -174,10 +182,13 @@
   position: relative;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 
   border: none;
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+
+  margin-left: auto;
 
   padding: 0;
   background-color: transparent;
@@ -200,13 +211,10 @@
   }
 
   .button__line {
-    position: relative;
     display: inline-flex;
     z-index: 6;
 
-    opacity: 1;
-
-    width: 100%;
+    width: 24px;
     height: 1px;
     background-color: $brand-color;
     transition: makeTransition(color, opacity);
@@ -224,35 +232,35 @@
 
     &::before {
       content: '';
-      top: -6px;
-      left: 0;
+      top: 6px;
+      left: 3px;
     }
 
     &::after {
       content: '';
-      bottom: -6px;
-      left: 0;
+      bottom: 6px;
+      left: 3;
     }
   }
 
   &.is-open {
     .button__line {
-      opacity: 1;
       width: 0;
 
       &::before {
         content: '';
-        top: -1px;
-        left: 0;
+        top: 15px;
+        left: 3;
         transform: rotate(45deg);
         background-color: $white;
+
       }
 
       &::after {
         content: '';
         transform: rotate(-45deg);
-        bottom: 1px;
-        left: 0;
+        bottom: 14px;
+        left: 3;
 
         background-color: $white;
       }
@@ -261,17 +269,10 @@
 }
 
 .header__nav .button {
-  display: flex;
-  align-items: center;
-
   border-radius: 22px;
   transition: makeTransition(opacity, transform);
 
   @media screen and (max-width: 767px) {
-    position: absolute;
-    top: 60px;
-    left: 50%;
-    transform: translateX(-50%);
     display: none;
   }
 }
@@ -284,7 +285,6 @@
       left: 50%;
       transform: translateX(-50%);
       display: block;
-      opacity: 1;
     }
     @media screen and (min-width: 768px) {
       position: absolute;
@@ -315,7 +315,6 @@
   height: 10px;
   margin-left: 15px;
   fill: transparent;
-
   stroke: $brand-color;
 }
 
