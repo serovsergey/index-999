@@ -1,0 +1,141 @@
+.footer {
+    background-color: $bg-light;
+    &__container {
+        padding-bottom: 40px;
+    }
+}
+
+.handmade {
+    max-width: 234px;
+    &__upper-text {
+        font-family: $brand-font;
+        font-size: 18px;
+        line-height: 1.17;
+        text-transform: uppercase;
+        color: $brand-accent;
+        margin-bottom: 16px;
+    }
+    &__under-text {
+        font-family: $brand-font;
+        font-size: 34px;
+        line-height: 39px;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        color: $brand-color;
+    }
+}
+
+.socials {
+    &__list {
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        margin-bottom: 40px;
+    }
+    &__icon {
+        width: 60%;
+        height: 60%;
+        fill: $white;
+    }
+    &__text {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.86;
+        text-align: right;
+        color: $text-color;
+    }
+    &__tel {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.86;
+        color: $brand-color;
+    }
+}
+
+.rights-reserved {
+    width: 100%;
+    border-top: 1px solid $quote-line-color;
+    &__text {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 1.52;
+        text-align: center;
+        color: $subtext-color;
+    }
+}
+
+@include breakpointTo(tablet) {
+    .handmade {
+        margin-bottom: 40px;
+    }
+    .socials {        
+        &__link {
+            width: 32px;
+            height: 32px;
+        }
+        &__box:not(:last-child) {
+            margin-right: 28px;
+        }
+    }
+    .rights-reserved {
+        display: block;
+        padding: 20px;
+    }
+  }
+
+  @include breakpointFrom(tablet) {
+    .footer__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    .handmade {
+        max-width: 370px;
+        &__upper-text {
+            font-size: 30px;
+            line-height: 1.13;
+            letter-spacing: 0.04em;
+            margin-bottom: 12px;
+        }
+        &__under-text {
+            font-size: 58px;
+            line-height: 1.14;
+            letter-spacing: 0.06em;
+        }
+    }
+
+    .socials {
+        &__link {
+            width: 34px;
+            height: 34px;
+        }
+        &__box:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+    .rights-reserved {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        padding: 8px 0;
+    }
+  }
+
+  @include breakpointFrom(desktop) {
+    .footer__container {
+        margin-bottom: 60px;
+    }
+    .handmade {
+        max-width: 480px;
+        &__upper-text {
+            margin-bottom: 16px;
+        }
+    }
+    .socials {
+        &__box:not(:last-child) {
+            margin-right: 24px;
+        }
+    }
+  }
+
+

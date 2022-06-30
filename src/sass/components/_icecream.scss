@@ -1,0 +1,44 @@
+.backdrop[data-modal='icecream'] .icecream {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.icecream {
+  width: 450px;
+  max-width: calc(100% - 20px);
+
+  &__wrapper {
+    display: flex;
+    padding: 16px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__buy {
+    text-align: center;
+  }
+  &__img {
+    display: block;
+    width: 128px;
+    height: 128px;
+  }
+
+  &__price {
+    padding: 16px;
+    font-family: $brand-font;
+    font-size: 20px;
+    text-align: center;
+    color: $brand-color;
+    text-shadow: -1px -1px 0 $brand-accent, 1px -1px 0 $brand-accent,
+      -1px 1px 0 $brand-accent, 1px 1px 0 #000;
+    transform: rotate(5deg);
+  }
+
+  &__description {
+    text-indent: 2rem;
+    font-size: 14px;
+    line-height: 2;
+  }
+}

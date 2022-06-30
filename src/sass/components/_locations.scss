@@ -1,0 +1,14 @@
+.backdrop[data-modal='locations'] .locations {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.locations {
+  max-width: calc(100% - 20px);
+
+  &__map {
+    max-width: 70vw;
+  }
+}

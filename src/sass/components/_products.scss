@@ -11,6 +11,14 @@
   text-transform: uppercase;
   color: $brand-accent;
   margin-bottom: 15px;
+
+  @include breakpointFrom(tablet) {
+    font-size: 26px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 30px;
+  }
 }
 
 .products__title {
@@ -22,11 +30,22 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $brand-color;
+  margin-bottom: 148px;
 
-  padding-bottom: 148px;
+  @include breakpointFrom(tablet) {
+    font-size: 48px;
+    margin-bottom: 154px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 58px;
+    margin-bottom: 258px;
+  }
 }
 
 .products__list {
+  text-align: center;
+
   @include breakpointFrom(tablet) {
     display: flex;
   }
@@ -35,7 +54,7 @@
 .products-item {
   background: $bg-color;
   border-radius: 24px;
-  padding: 160px 40px 40px;
+  padding: 160px 40px 0;
   height: 490px;
 
   &:not(:last-child) {
@@ -50,7 +69,8 @@
     }
 
     & {
-      padding: 115px 32px 40px;
+      padding: 115px 33px 0;
+      height: 450px;
     }
   }
 
@@ -61,6 +81,7 @@
 
     & {
       padding: 165px 75px 60px;
+      height: 535px;
     }
 
   }
@@ -78,8 +99,11 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white;
-
   margin-bottom: 70px;
+
+  @include breakpointFrom (desktop) {
+    font-size: 30px;
+  }
 
   &::before {
     position: absolute;
@@ -93,6 +117,16 @@
     display: inline-block;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @include breakpointFrom(tablet) {
+      width: 224px;
+      height: 224px;
+    }
+
+    @include breakpointFrom(desktop) {
+      width: 394px;
+      height: 394px;
+    }
   }
 
   &--ice::before {
@@ -180,7 +214,13 @@
     content: "";
     display: inline-block;
     filter: drop-shadow(10px 0px 0px $white) drop-shadow(-10px 0px 0px $white);
+
+    @include breakpointFrom(desktop) {
+      top: 65px;
+    }
   }
+
+
 }
 
 .products-item__text {
@@ -190,13 +230,12 @@
   text-align: center;
   letter-spacing: 0.04em;
   color: $white;
-
   margin-bottom: 32px;
-}
 
-.button__products {
-  display: block;
-  margin: 0 auto;
+  @include breakpointFrom(desktop) {
+    margin-bottom: 60px;
+  }
+
 }
 
 .products__icon {

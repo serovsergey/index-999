@@ -1,0 +1,228 @@
+.backdrop[data-modal='buynow'] .buynow {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.buynow {
+  max-width: calc(100% - 20px);
+  background-color: rgba(194, 226, 151, 1);
+
+  color: $bg-color;
+
+  @include breakpointFrom(mobile) {
+
+    background-image:
+      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-repeat: no-repeat;
+    background-size: 570px;
+    background-position: left 15% bottom;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-header/icecream2x-header-tablet.png');
+      background-repeat: no-repeat;
+      background-size: 370px;
+      background-position: center bottom;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 380px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 528px;
+
+    background-image: url('../images/hero-header/girl1x-tablet.png'),
+      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-repeat: no-repeat;
+    background-size: 140px, 570px;
+    background-position: right bottom, left 15% bottom;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-header/girl2x-tablet.png'),
+        url('../images/hero-header/icecream2x-header-tablet.png');
+      background-repeat: no-repeat;
+      background-size: 140px, 370px;
+      background-position: right bottom, center bottom;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding: 20px;
+}
+
+.form__field {
+  position: relative;
+  margin-bottom: 10px;
+
+  transition: makeTransition((opacity));
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+
+  font-size: 14px;
+  letter-spacing: 0.02rem;
+  color: $brand-color;
+
+  padding: 11px 0;
+  padding-left: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 10px;
+
+  transition: makeTransition((border));
+
+
+  &:focus {
+    border-color: $brand-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $brand-color;
+  }
+}
+
+.form__label {
+  display: inline-block;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: $white;
+
+  margin-bottom: 4px;
+
+  transition: makeTransition((color));
+
+
+  .form__field:focus-within & {
+    color: $brand-color;
+  }
+}
+
+.textarea {
+  position: relative;
+}
+
+.textarea__label {
+  display: block;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  color: $white;
+
+  margin-bottom: 4px;
+
+  transition: makeTransition((color));
+
+
+  .form__field:focus-within & {
+    color: $brand-color;
+  }
+}
+
+.form__area {
+  display: block;
+  height: 120px;
+  padding: 12px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  resize: none;
+  margin-bottom: 20px;
+}
+
+
+.form__tooltip {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: $brand-color;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 15px;
+
+  font-size: 12px;
+
+  display: inline-block;
+  position: absolute;
+  top: -60%;
+  left: 30px;
+  min-width: 150px;
+
+  opacity: 0;
+
+  transition: opacity 600ms ease 500ms;
+
+
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid $brand-color;
+  }
+
+  &::after {
+    border-top: 10px solid transparent;
+    bottom: -19px;
+  }
+
+  .form__field:hover & {
+    opacity: 1;
+  }
+}
+
+.form__btn {
+  display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: $white;
+
+  padding: 10px 56px;
+
+  background-color: $brand-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  cursor: pointer;
+
+  transition: makeTransition((background-color));
+
+  &:hover {
+    background-color: rgb(18, 18, 18);
+  }
+}
