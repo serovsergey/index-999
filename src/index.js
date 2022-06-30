@@ -31,7 +31,10 @@
       refs.backdrop.setAttribute('data-modal', '');
       document.body.classList.remove('no-scroll');
     })));
-    refs.backdrop.addEventListener('click', (e) => (refs.backdrop.setAttribute('data-modal', '')));
+    refs.backdrop.addEventListener('click', () => {
+      refs.backdrop.setAttribute('data-modal', '');
+      document.body.classList.remove('no-scroll');
+    });
   }
 
   if (refs.arrMenuItems)
