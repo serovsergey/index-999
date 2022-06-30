@@ -1,29 +1,29 @@
 <header class="header">
   <div class="container">
     <div class="header__nav">
-      <a href="#" class="logo header__logo">
-        <picture> 
+      <a href="#home" class="logo header__logo">
+        <picture>
           <source
             srcset="
               ./images/hero-header/logo1x.png 1x,
               ./images/hero-header/logo2x.png 2x
             "
-            media="(min-width:1200px)" />
+            media="(min-width:1280px)" />
 
           <source
             srcset="
               ./images/hero-header/logo1x.png 1x,
               ./images/hero-header/logo2x.png 2x
             "
-            media="(max-width: 1199px)" />
+            media="(max-width: 1279px)" />
           <img
-            src="./images/hero-header/logo2x.png"
+            src="./images/hero-header/logo1x.png"
             alt="Логотип"
             class="logo__img"
-            width="199" /></picture
+            width="199" aria-label="Логотип"/></picture
       ></a>
       <nav class="nav" data-menu id="menu-container">
-        <button class="button button--bold" data-btn-open="buynow">
+        <button class="button button--bold" data-btn-open="buynow" aria-label="Buy now">
           Buy now
           <svg class="button__icon" width="10">
             <use href="./images/icons.svg#icon-bracket"></use>
@@ -32,10 +32,10 @@
         <ul class="nav__items">
           <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
           <li class="nav__item">
-            <a href="#about" class="nav__link">About us</a>
+            <a href="#reviews" class="nav__link">About us</a>
           </li>
           <li class="nav__item">
-            <a href="#made" class="nav__link">How it’s made?</a>
+            <a href="#about" class="nav__link">How it’s made?</a>
           </li>
           <li class="nav__item">
             <a href="#products" class="nav__link">Our products</a>
@@ -51,9 +51,9 @@
         data-menu-button
         aria-controls="menu-container"
       >
-        <span role="button" class="button__line" aria-expanded="false"></span>
+        <span role="button" class="button__line" aria-expanded="false" aria-label="Closed button"></span>
       </button>
-      <button class="button button--bold" data-btn-open="buynow">
+      <button class="button button--bold" data-btn-open="buynow" aria-label="Buy now">
         Buy now
         <svg class="button__icon" width="10">
           <use href="./images/icons.svg#icon-bracket"></use>
@@ -67,8 +67,8 @@
             ice cream made with
             <span class="header__title--accent">passion</span>
           </h1>
-          <a href="#products" class="button button--accent">Products</a>
-          <a href="#about" class="button">How it’s made?</a>
+          <a href="#products" class="button button--accent" aria-label="Products">Products</a>
+          <a href="#about" class="button" aria-label="How it’s made?">How it’s made?</a>
         </li>
         <li class="header__item">
           <div class="header__group">
@@ -97,7 +97,7 @@
                 ./images/hero-header/milk2x-tablet.png 2x
               "
               media="(max-width: 1199px)" />
-            <img
+            <img aria-label="Photo Milk"
               src="./images/hero-header/milk1x-tablet.png"
               alt="Photo Milk"
               class="product__img"
@@ -110,7 +110,7 @@
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et
           </p>
-          <a href="#" class="button button--round">
+          <a href="#" class="button button--round" aria-label="button">
             <svg class="product__icon">
               <use href="./images/icons.svg#icon-arrow-right-thick"></use></svg></a>
         </div>
