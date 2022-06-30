@@ -22,7 +22,7 @@
       (min-resolution: 2dppx) {
       background-image: url('../images/hero-header/icecream2x-header-tablet.png');
       background-repeat: no-repeat;
-      background-size: 370px;
+      background-size: 570px;
       background-position: center bottom;
     }
   }
@@ -46,7 +46,7 @@
       background-image: url('../images/hero-header/girl2x-tablet.png'),
         url('../images/hero-header/icecream2x-header-tablet.png');
       background-repeat: no-repeat;
-      background-size: 140px, 370px;
+      background-size: 140px, 570px;
       background-position: right bottom, center bottom;
     }
   }
@@ -114,7 +114,7 @@
 .form__label {
   display: inline-block;
 
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.01em;
@@ -137,7 +137,7 @@
 .textarea__label {
   display: block;
 
-  font-weight: 400;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.01em;
