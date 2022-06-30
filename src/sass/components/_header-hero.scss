@@ -38,18 +38,17 @@
         url('../images/hero-header/icecream2x-header-tablet.png');
       background-repeat: no-repeat;
       background-size: 190px, 370px;
-      background-position: right 15% bottom, center bottom;
+      background-position: right 15% bottom, left 65% bottom;
     }
   }
 
   @media screen and (min-width: 1280px) {
     overflow: hidden;
-    height: 100vh;
 
     background-image: url('../images/hero-header/girl1x-descktop.png'),
       url('../images/hero-header/icecream1x-header-descktop.png');
     background-repeat: no-repeat;
-    background-size: 304px, 504px;
+    background-size: 304px, 534px;
     background-position: right 10% bottom, right 38% bottom;
 
     @media (min-device-pixel-ratio: 2),
@@ -58,7 +57,7 @@
       background-image: url('../images/hero-header/girl2x-descktop.png'),
         url('../images/hero-header/icecream2x-header-descktop.png');
       background-repeat: no-repeat;
-      background-size: 304px, 504px;
+      background-size: 304px, 534px;
       background-position: right 10% bottom, right 38% bottom;
     }
   }
@@ -407,9 +406,15 @@
   font-size: 8px;
   line-height: 1.1;
 
+  height: 24px;
+
+  padding: 5px 13px;
+
   @media screen and (min-width: 1280px) {
     font-size: 14px;
     line-height: 1.2;
+    height: 40px;
+    min-width: 138px;
   }
 
   &.button + .button {
@@ -547,6 +552,8 @@
 .product__body .button {
   width: 18px;
   height: 18px;
+  padding: 0;
+
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
@@ -556,5 +563,6 @@
 .product__icon {
   width: 10px;
   height: 10px;
+  padding: 0;
   fill: $brand-color;
 }
