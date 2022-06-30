@@ -57,6 +57,14 @@
   padding: 160px 40px 0;
   height: 490px;
 
+  &--bg-coffee {
+    background-color: $bg-cafe;
+  }
+
+  &--bg-milk {
+    background-color: $bg-green;
+  }
+
   &:not(:last-child) {
     @include breakpointTo(tablet) {
       margin-bottom: 140px;

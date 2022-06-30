@@ -14,7 +14,7 @@
   background-color: rgba(0, 0, 0, 0.2);
   transform: scale(1);
   transition: makeTransition((opacity visibility));
-  z-index: 2;
+  z-index: 11;
 }
 
 .modal {
@@ -75,3 +75,4 @@
 @import './icecream';
 @import './icecoffee';
 @import './milkshakes';
+@import './recipe';
