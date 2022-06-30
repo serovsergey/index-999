@@ -10,11 +10,12 @@
 
     @include breakpointFrom(desktop) {
         padding-top: 60px;
-        padding-bottom: 120px;
+        padding-bottom: 60px;
     }
 
     background-repeat: no-repeat;
-    background-position: 50% 575px;
+    background-position: 50% 75%;
+    background-size: contain;
 
     @include breakpointTo(tablet) {
         background-image: url(../images/about/spilledmilk1x-mobile.png);
@@ -30,6 +31,9 @@
         @include breakpointDPR(2) {
             background-image: url(../images/about/spilledmilk1x-descktop.png);
         }
+
+        background-position: bottom;
+        background-size: contain;
     }
 
     background-color: $bg-light;
@@ -37,16 +41,12 @@
 }
 
 .about__thumb {
-    padding-bottom: 40px;
 
     @include breakpointFrom(tablet) {
-        padding-bottom: 80px;
         display: flex;
     }
 
-    @include breakpointFrom(desktop) {
-        padding-bottom: 120px;
-    }
+
 
 
 
@@ -97,11 +97,19 @@
 
 .about__block {
     margin-top: 40px;
-    width: 100%;
+    width: 220px;
 
     @include breakpointFrom(tablet) {
         margin-left: 32px;
         margin-top: 0;
+        width: 335px;
+    }
+
+    @include breakpointFrom(desktop) {
+        width: 440px;
+        margin-left: 140px;
+        padding-top: 90px;
+
     }
 }
 
@@ -117,6 +125,19 @@
 
     &--sub {
         color: $subtext-color;
+    }
+
+    @include breakpointFrom(tablet) {
+        font-size: 14px;
+        line-height: 1.77;
+    }
+
+    @include breakpointFrom(desktop) {
+        font-size: 16px;
+
+        &:not(:last-of-type) {
+            margin-bottom: 32px;
+        }
     }
 }
 
