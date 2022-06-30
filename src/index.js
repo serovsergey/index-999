@@ -43,7 +43,7 @@
     })
 
   function toggleMenu() {
-    if (document.body.clientWidth >= 1280) return;
+    if (window.matchMedia("(min-width: 1280px)").matches) return;
     const expanded = refs.menuBtn.getAttribute("aria-expanded") == "true" | false;
     refs.menuBtn.classList.toggle("is-open");
     refs.menuBtn.setAttribute("aria-expanded", !expanded);
