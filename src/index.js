@@ -19,6 +19,11 @@
         if (modalElement)
           modalElement.addEventListener('click', (e) => (e.stopPropagation()));
         document.body.classList.add('no-scroll');
+        if (refs.menuBtn.classList.contains('is-open')) {
+          refs.menuBtn.classList.remove("is-open");
+          refs.menuBtn.setAttribute("aria-expanded", 'false');
+          refs.mobileMenu.classList.remove("is-open");
+        }
       })
     })
     refs.arrBtnClose.forEach(btn => (btn.addEventListener('click', () => {
