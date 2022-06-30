@@ -147,21 +147,3 @@ ol {
   fill: currentColor;
   transition: makeTransition(fill);
 }
-
-// Валентин!!!
-// Все селекторы тегов нужно заменить на селекторы классов (дать их по БЭМ)
-// И соответственно описать их в своем модуле
-.contacts h2,
-.contacts p,
-.contacts a {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.86;
-  letter-spacing: 0.04em;
-
-  @include breakpointFrom(tablet) {
-  }
-
-  @include breakpointFrom(desktop) {
-  }
-}

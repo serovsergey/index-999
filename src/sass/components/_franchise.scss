@@ -1,0 +1,154 @@
+.franchise {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%) scale(1.8);
+}
+
+.backdrop[data-modal='franchise'] .franchise {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: initial;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.franchise {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 450px;
+  max-width: calc(100% - 20px);
+  padding: 40px;
+  color: $text-color;
+  background-color: $bg-light;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: makeTransition((opacity transform visibility));
+
+  &__title {
+    display: block;
+    text-align: center;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    color: $text-color;
+  }
+}
+
+.form-field {
+  position: relative;
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+
+  &__label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.16;
+    color: $text-color;
+  }
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__input {
+    width: 100%;
+    height: 40px;
+    color: inherit;
+    padding: 8px 8px 8px 42px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: makeTransition((border-color));
+
+    &::placeholder {
+      color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus,
+    &:hover {
+      border-color: $hover-bg-accent-color;
+    }
+
+    &--multiline {
+      display: block;
+      padding: 12px 16px;
+      height: 120px;
+      resize: none;
+    }
+
+    &--extra-margin {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__input:focus + &__icon,
+  &__input:hover + &__icon {
+    fill: $hover-bg-accent-color;
+  }
+
+  &--checkbox {
+    // position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    // height: 24px;
+    margin-bottom: 30px;
+    font-size: 12px;
+  }
+
+  &__icon {
+    position: absolute;
+    fill: $brand-accent;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 18px;
+    width: 18px;
+    transition: makeTransition((fill));
+  }
+
+  &:hover .tool-tip {
+    opacity: 1;
+  }
+
+  &--checkbox:focus-within {
+    outline: 1px dotted $bg-color;
+  }
+
+  &__check {
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    fill: $alternate-accent-color;
+    border: 2px solid $brand-color;
+    border-radius: 2px;
+    transition: makeTransition((fill background border-color));
+  }
+
+  &__input:checked + &__check {
+    fill: $bg-light;
+    background-color: $bg-light;
+    border-color: $brand-color;
+    border-width: 2px;
+  }
+}
+
+.request-form {
+  &__agreement-link {
+    text-decoration: underline;
+    color: $brand-accent;
+  }
+
+  &__submit {
+    display: block;
+    margin: 0 auto;
+  }
+}
