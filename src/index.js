@@ -5,6 +5,7 @@
     arrModalOpeners: document.querySelectorAll("[data-btn-open]"),
     backdrop: document.querySelector("[data-modal]"),
     arrBtnClose: document.querySelectorAll(".btn-close"),
+    arrMenuItems: document.querySelectorAll(".nav__link"),
   };
 
   if (refs.menuBtn)
@@ -27,6 +28,10 @@
     refs.backdrop.addEventListener('click', (e) => (refs.backdrop.setAttribute('data-modal', '')));
   }
 
+  if (refs.arrMenuItems)
+    refs.arrMenuItems.forEach((item) => {
+      item.addEventListener('click', toggleMenu)
+    })
 
   function toggleMenu() {
     const expanded = refs.menuBtn.getAttribute("aria-expanded") == "true" | false;
