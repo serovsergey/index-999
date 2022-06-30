@@ -2,7 +2,8 @@
     <div class="container contacts__container">
         <div class="contacts__group">
             <div class="contacts-card">
-                <h2 class="contacts-card__title">CAFE</h2>
+                <h2 class="contacts-card__title visually-hidden">Contacts cards</h2>
+                <p class="contacts-card__class">CAFE</p>
                 <p class="contacts-card__city">Chicago</p>
                 <p class="contacts-card__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 <ul class="shedule">
@@ -21,7 +22,7 @@
                 </ul>
             </div>
             <div class="contacts-card">
-                <h2 class="contacts-card__title">FOODTRUCK</h2>
+                <h2 class="contacts-card__class">FOOD TRUCK</h2>
                 <p class="contacts-card__city">Los Angeles</p>
                 <p class="contacts-card__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 <ul class="shedule">
@@ -40,7 +41,7 @@
                 </ul>
             </div>
             <div class="contacts-card">
-                <h2 class="contacts-card__title">CAFE</h2>
+                <h2 class="contacts-card__class">CAFE</h2>
                 <p class="contacts-card__city">New York</p>
                 <p class="contacts-card__description">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 <ul class="shedule">
@@ -60,8 +61,19 @@
             </div>
         </div>
         <div class="help-button">
-            <button class="button button--bold button--alternate" type="button">Our Locations</button>
-            <button class="button button--bold  help-button__franchise" type="button">Franchise</button>
+
+            <button class="button button--accent button--alternate help-button__franchise " type="button">
+                Our Location
+                <svg class="alternate-button__icon" width="5" height="10">
+                    <use href="./images/icons.svg#icon-bracket"></use>
+                </svg>
+            </button>
+            <button class="button help-button__franchise" type="button">
+                Franchise
+                <svg class="help-button__icon" width="5" height="10">
+                    <use href="./images/icons.svg#icon-bracket"></use>
+                </svg>
+            </button>
         </div>
-    </div>
-</section>  
+    </div>  
+</section>
