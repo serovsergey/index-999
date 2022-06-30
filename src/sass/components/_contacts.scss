@@ -1,90 +1,82 @@
+.contacts__text-style {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  @include breakpointFrom(tablet) {
+    font-size: 14px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 16px;
+  }
+}
+.contacts .button {
+  height: 44px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.3;
+}
+
 .contacts {
     background-color: $bg-light;
-
     &__container {
-        padding-bottom: 48px;
+        position: relative;
     }
-
     &__group {
+        position: absolute;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        position: relative;
-        margin-bottom: 32px;
+        justify-content: center;        
     }
-
     &-card {
         padding: 40px 32px;
         background: $white;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
-
-        &__title {
-        display: inline-block;
-        padding: 0 25px;
-        margin-bottom: 20px;
-        background-color: $bg-cafe;
-        color: $white;
-        text-align: center;
-        border-radius: 4px;
+        &__class {
+            display: inline-block;
+            padding: 0 25px;
+            margin-bottom: 20px;
+            background-color: $bg-cafe;
+            color: $white;
+            text-align: center;
+            border-radius: 4px;    
         }
-
-        .contacts-card:nth-child(2n) &__title {
-        background-color: $bg-green;
+        
+        .contacts-card:nth-child(2n) &__class{
+            background-color: $bg-green;
         }
 
         &__city {
-        color: $text-color;
-        margin-bottom: 8px;
+            color: $text-color;
+            margin-bottom: 8px;
         }
 
-        &-card {
-            padding: 40px 32px;
-            background: $white;
-            box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-            border-radius: 24px;
-            &__class {
-                display: inline-block;
-                padding: 0 25px;
-                margin-bottom: 20px;
-                background-color: $bg-cafe;
-                color: $white;
-                text-align: center;
-                border-radius: 4px;    
-            }
-            
-            .contacts-card:nth-child(2n) &__class{
-                background-color: $bg-green;
-            }
-
-            &__city {
-                color: $text-color;
-                margin-bottom: 8px;
-            }
-
-            &__description {
-                color: $subtext-color;
-                margin-bottom: 24px;
-                line-height: 1.5;
-                letter-spacing: normal;
-            }
+        &__description {
+            color: $subtext-color;
+            margin-bottom: 24px;
+            line-height: 1.5;
+            letter-spacing: normal;
         }
     }
 }
 
+
 @include breakpointTo(tablet) {
   .contacts {
     &__container {
-        padding-bottom: 40px;
+        padding-top: 1011px;
+        padding-bottom: 48px;
     }
     &__group {
-        padding-top: 105px;
-        margin-bottom: 32px;
+        max-width: 280px;
+        bottom: 178px;
     }
 
-    &-card:first-child {
-        position: absolute;
-        top: -352px;
+    &-card {
+        
     }
     &-card:not(:last-child) {
         margin-bottom: 20px;
@@ -94,15 +86,15 @@
 
 @include breakpointFrom(tablet) {
     .contacts {
-        height: 561px;
         &__container {
-            position: relative;
-            padding-top: 477px;
+            padding-top: 472px;
+            padding-bottom: 40px;
         }
         &__group {
+            max-width: 728px;
             flex-direction: row;
-            position: absolute;
-            bottom: 84px;
+            bottom: 124px;
+            margin: 0;
 
         }
         &-card {
@@ -130,12 +122,13 @@
 
 @include breakpointFrom(desktop) {
     .contacts {
-        height: 690px;
-        &__container {
+        &__container {       
             padding-top: 525px;
+            padding-bottom: 120px;
         }
         &__group {
-            bottom: 104px;
+            max-width: 1160px;
+            bottom: 225px;
 
         }
         &-card {
