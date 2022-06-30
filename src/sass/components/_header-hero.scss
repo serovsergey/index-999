@@ -5,8 +5,6 @@
   position: relative;
 
   @include breakpointTo(tablet) {
-    overflow: hidden;
-
     background-image: url('../images/hero-header/icecream1x-header-mobile.png');
     background-repeat: no-repeat;
     background-size: 300px;
@@ -23,8 +21,6 @@
   }
 
   @include breakpointFrom(tablet) {
-    overflow: hidden;
-
     background-image: url('../images/hero-header/girl1x-tablet.png'),
       url('../images/hero-header/icecream1x-header-tablet.png');
     background-repeat: no-repeat;
@@ -414,7 +410,7 @@
     font-size: 14px;
     line-height: 1.2;
     height: 40px;
-    min-width: 138px;
+    padding: 11px 22px;
   }
 
   &.button + .button {
@@ -557,6 +553,7 @@
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
+    padding: 0;
   }
 }
 
