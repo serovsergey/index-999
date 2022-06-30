@@ -5,8 +5,6 @@
   position: relative;
 
   @include breakpointTo(tablet) {
-    overflow: hidden;
-
     background-image: url('../images/hero-header/icecream1x-header-mobile.png');
     background-repeat: no-repeat;
     background-size: 300px;
@@ -23,8 +21,6 @@
   }
 
   @include breakpointFrom(tablet) {
-    overflow: hidden;
-
     background-image: url('../images/hero-header/girl1x-tablet.png'),
       url('../images/hero-header/icecream1x-header-tablet.png');
     background-repeat: no-repeat;
