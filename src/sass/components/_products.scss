@@ -11,6 +11,14 @@
   text-transform: uppercase;
   color: $brand-accent;
   margin-bottom: 15px;
+
+  @include breakpointFrom(tablet) {
+    font-size: 26px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 30px;
+  }
 }
 
 .products__title {
@@ -22,11 +30,20 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $brand-color;
+  margin-bottom: 148px;
 
-  padding-bottom: 148px;
+  @include breakpointFrom(tablet) {
+    font-size: 48px;
+  }
+
+  @include breakpointFrom(desktop) {
+    font-size: 58px;
+  }
 }
 
 .products__list {
+  text-align: center;
+
   @include breakpointFrom(tablet) {
     display: flex;
   }
@@ -192,11 +209,6 @@
   color: $white;
 
   margin-bottom: 32px;
-}
-
-.button__products {
-  display: block;
-  margin: 0 auto;
 }
 
 .products__icon {
