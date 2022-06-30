@@ -18,6 +18,7 @@
     background: $white;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
+
     &__title {
       display: inline-block;
       padding: 0 25px;
@@ -43,13 +44,14 @@
       margin-bottom: 24px;
     }
   }
-
+}
 
 @include breakpointTo(tablet) {
   .contacts {
     &__group {
       padding-top: 105px;
     }
+
     &-card:first-child {
       position: absolute;
       top: -360px;
@@ -57,11 +59,9 @@
   }
 }
 
-@include breakpointFrom(tablet) {
-}
+@include breakpointFrom(tablet) {}
 
-@include breakpointFrom(desktop) {
-}
+@include breakpointFrom(desktop) {}
 
 .shedule {
   display: block;
@@ -69,23 +69,27 @@
   border-top: 1px solid $quote-line-color;
   border-bottom: 1px solid $quote-line-color;
   padding: 24px 0;
+
   &__parts {
     margin-bottom: 8px;
   }
+
   &__days {
     color: $text-color;
   }
+
   &__time {
     color: $brand-accent;
   }
 }
 
 .adress {
-  &__link {
-  }
+  &__link {}
+
   &__number {
     color: $subtext-color;
   }
+
   &__mail {
     color: $subtext-color;
   }
@@ -100,8 +104,6 @@
   }
 }
 
-@include breakpointFrom(tablet) {
-}
+@include breakpointFrom(tablet) {}
 
-@include breakpointFrom(desktop) {
-}
+@include breakpointFrom(desktop) {}
