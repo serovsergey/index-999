@@ -1,26 +1,36 @@
- .gallery__header {
-     display: none;
- }
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
+.gallery {
+    padding: 0;
 
- .gallery {
-     &__img {
-         width: 100%;
-         object-fit: cover;
+    &__img {
+        width: 100%;
+        object-fit: cover;
 
-         @include breakpointTo(tablet) {
-             max-width: 364px;
-             //height: 122px;
-         }
+        @include breakpointTo(tablet) {
+            max-width: 364px;
+            //height: 122px;
+        }
 
-         @include breakpointTo(desktop) {
-             max-width: 786px;
-             // height: 264px;
-         }
+        @include breakpointTo(desktop) {
+            max-width: 786px;
+            // height: 264px;
+        }
 
-         @include breakpointTo(desktop) {
-             max-width: 1280px;
-             //height: 430px;
-         }
-     }
- }
+        @include breakpointTo(desktop) {
+            max-width: 1280px;
+            //height: 430px;
+        }
+    }
+}
