@@ -1,52 +1,156 @@
+.advantages {
+    background-color: $bg-light;
+    padding: 0 70px 80px 20px;
+
+    @include breakpointFrom(tablet) {
+        padding: 0 209px 80px 32px;
+    }
+
+    @include breakpointFrom(desktop) {
+        padding: 21px 123px 120px 16px;
+    }
+}
+
+.advantages__header {
+    display: none;
+}
+
 .advantages__list {
-    display: inline-flex;
-    flex-wrap: wrap;
+    display: block;
+
+    @include breakpointFrom(tablet) {
+        display: flex;
+        //flex-wrap: wrap;
+        // flex-direction: row;
+    }
+
 }
 
 .advantages {
     background-color: $bg-light;
 
+
+    &__item {
+        position: relative;
+        width: 100%;
+
+        @include breakpointFrom(mobile) {
+            width: 230px;
+            padding-top: 60px;
+
+            &:not(:last-child) {
+                margin-bottom: 32px;
+            }
+        }
+
+        @include breakpointFrom(tablet) {
+            width: 180px;
+            padding-top: 86px;
+
+            &:not(:last-child) {
+                margin-right: 22px;
+            }
+        }
+
+        @include breakpointFrom(desktop) {
+            width: 288px;
+            padding-top: 90px;
+
+            &:not(:last-child) {
+                margin-right: 106px;
+            }
+        }
+
+        &::before {
+            content: " ";
+            position: absolute;
+
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+
+        &--milk::before {
+            width: 33px;
+            height: 50px;
+            top: 0;
+            left: 0;
+
+            background-image:
+                url(../images/advantages/milk1x.png),
+                url(../images/advantages/milk2x.png);
+
+        }
+
+        &--apple::before {
+            width: 50px;
+            height: 50px;
+            top: 0;
+            left: 0;
+
+            background-image:
+                url(../images/advantages/apple1x.png),
+                url(../images/advantages/apple2x.png);
+
+        }
+
+        &--heart::before {
+            width: 44px;
+            height: 50px;
+            top: 0;
+            left: 0;
+
+            background-image:
+                url(../images/advantages/heart1x.png),
+                url(../images/advantages/heart2x.png);
+        }
+    }
+
+    &__text {
+        font-family: $main-font;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 1.67;
+        letter-spacing: 0.02em;
+
+        color: $text-color;
+
+        @media screen and (min-width:768px) {
+            font-size: 14px;
+            line-height: 1.71;
+        }
+
+        @media screen and (min-width:1280px) {
+            font-size: 16px;
+            line-height: 1.75;
+        }
+    }
 }
 
 .advantages__title {
+
+
     font-family: $brand-font;
     font-style: normal;
     font-weight: 400;
+    font-size: 36px;
+    line-height: 1.14;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $brand-color;
+    margin-bottom: 20px;
 
-    position: relative;
+    @include breakpointFrom(tablet) {
+        font-size: 48px;
+        line-height: 1.15;
+        margin-bottom: 13px;
+    }
 
-    &::before {
-        content: " ";
-        position: absolute;
-
+    @include breakpointFrom(desktop) {
+        font-size: 58px;
+        line-height: 1.14;
         margin-bottom: 16px;
-
-        display: inline-block;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    &--milk::before {
-        width: 33px;
-        height: 50px;
-        background-image: url(../images/advantages/milk1x.png);
-
-    }
-
-    &--apple::before {
-        width: 50px;
-        height: 50px;
-        background-image: url(../images/advantages/apple1x.png);
-
-    }
-
-    &--heart::before {
-        width: 44px;
-        height: 50px;
-
-        background-image: url(../images/advantages/heart1x.png);
     }
 }
