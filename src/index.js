@@ -2,26 +2,29 @@
   const refs = {
     menuBtn: document.querySelector("[data-menu-button]"),
     mobileMenu: document.querySelector("[data-menu]"),
-    btnLocations: document.querySelector("[data-btn-locations]"),
-    btnFranchise: document.querySelector("[data-btn-franchise]"),
+    arrModalOpeners: document.querySelectorAll("[data-btn-open]"),
     backdrop: document.querySelector("[data-modal]"),
-    btnCloseModal: document.querySelectorAll(".btn-close"),
-    divFranchise: document.querySelector(".franchise"),
-    divLocations: document.querySelector(".locations"),
+    arrBtnClose: document.querySelectorAll(".btn-close"),
   };
 
   if (refs.menuBtn)
     refs.menuBtn.addEventListener('click', toggleMenu);
-  if (refs.backdrop && refs.btnCloseModal) {
-    console.log(refs.btnCloseModal);
-    if (refs.btnLocations)
-      refs.btnLocations.addEventListener('click', () => (refs.backdrop.setAttribute('data-modal', 'locations')));
-    if (refs.btnFranchise)
-      refs.btnFranchise.addEventListener('click', () => (refs.backdrop.setAttribute('data-modal', 'franchise')));
-    refs.btnCloseModal.forEach(btn => (btn.addEventListener('click', () => (refs.backdrop.setAttribute('data-modal', '')))));
+  if (refs.backdrop && refs.arrBtnClose && refs.arrModalOpeners) {
+    refs.arrModalOpeners.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const modalClass = btn.getAttribute('data-btn-open');
+        refs.backdrop.setAttribute('data-modal', modalClass);
+        const modalElement = document.querySelector(`.${modalClass}`);
+        if (modalElement)
+          modalElement.addEventListener('click', (e) => (e.stopPropagation()));
+        document.body.classList.add('no-scroll');
+      })
+    })
+    refs.arrBtnClose.forEach(btn => (btn.addEventListener('click', () => {
+      refs.backdrop.setAttribute('data-modal', '');
+      document.body.classList.remove('no-scroll');
+    })));
     refs.backdrop.addEventListener('click', (e) => (refs.backdrop.setAttribute('data-modal', '')));
-    refs.divFranchise.addEventListener('click', (e) => (e.stopPropagation()));
-    refs.divLocations.addEventListener('click', (e) => (e.stopPropagation()));
   }
 
 
