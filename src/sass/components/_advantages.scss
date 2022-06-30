@@ -10,98 +10,47 @@
 .advantages {
     background-color: $bg-light;
 
+}
 
-    @media screen and (min-width:320px) {
-        padding-bottom: 80px;
-        padding-right: 70px;
-        padding-left: 20px;
+.advantages__title {
+    font-family: $brand-font;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $brand-color;
+
+    position: relative;
+
+    &::before {
+        content: " ";
+        position: absolute;
+
+        margin-bottom: 16px;
+
+        display: inline-block;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
 
-    &__item {
-        @media screen and (min-width:320px) {
-            &:not(:last-child) {
-                margin-bottom: 32px;
-            }
-        }
+    &--milk::before {
+        width: 33px;
+        height: 50px;
 
-        @media screen and (min-width:768px) {
-            &:not(:last-child) {
-                margin-right: 4px;
-            }
 
-        }
     }
 
-    &__number {
-        font-family: $brand-font;
-        font-style: normal;
-        font-weight: 400;
-        letter-spacing: 0.04em;
-        text-transform: uppercase;
-        color: $brand-color;
+    &--apple::before {
+        width: 50px;
+        height: 50px;
 
-        @media screen and (min-width:320px) {
-            font-size: 36px;
-            line-height: 1.14;
-            width: 98px;
-            height: 56px;
-            top: 0;
-            left: 0;
-            margin-top: 16px;
-        }
 
-        @media screen and (min-width:768px) {
-            font-size: 48px;
-            line-height: 1.15;
-        }
-
-        @media screen and (min-width:1200px) {
-            font-size: 58px;
-            line-height: 1.14;
-        }
     }
 
-    &__text {
-        font-family: $main-font;
-        font-style: normal;
-        font-weight: 700;
-        letter-spacing: 0.02em;
-        color: $text-color;
+    &--heart::before {
+        width: 44px;
+        height: 50px;
 
-        @media screen and (min-width:320px) {
-            font-size: 12px;
-            line-height: 1.67;
-            width: 230px;
-        }
 
-        @media screen and (min-width:768px) {
-            font-size: 14px;
-            line-height: 1.71;
-        }
-
-        @media screen and (min-width:1200px) {
-            font-size: 16px;
-            line-height: 1.75;
-        }
-    }
-
-    &__img {
-
-        @media screen and (min-width:320px) {
-            width: 33px;
-            height: 50px;
-        }
-
-        @media screen and (min-width:768px) {
-            width: 50px;
-            height: 50px;
-
-        }
-
-        @media screen and (min-width:1200px) {
-            width: 44px;
-            height: 50px;
-
-        }
     }
 }
