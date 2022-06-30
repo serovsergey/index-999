@@ -12,9 +12,7 @@
   color: $bg-color;
 
   @include breakpointFrom(mobile) {
-
-    background-image:
-      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-image: url('../images/hero-header/icecream1x-header-tablet.png');
     background-repeat: no-repeat;
     background-size: 570px;
     background-position: left 15% bottom;
@@ -54,6 +52,23 @@
   }
 }
 
+.modal-header__title {
+  font-family: 'Titan One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $brand-color;
+
+  @media screen and (max-width: 767px) {
+  font-size: 28px;
+
+  }
+
+}
+
 .form {
   display: flex;
   flex-direction: column;
@@ -86,7 +101,6 @@
 
   transition: makeTransition((border));
 
-
   &:focus {
     border-color: $brand-color;
     outline: none;
@@ -111,7 +125,6 @@
 
   transition: makeTransition((color));
 
-
   .form__field:focus-within & {
     color: $brand-color;
   }
@@ -134,7 +147,6 @@
 
   transition: makeTransition((color));
 
-
   .form__field:focus-within & {
     color: $brand-color;
   }
@@ -153,7 +165,6 @@
   resize: none;
   margin-bottom: 20px;
 }
-
 
 .form__tooltip {
   color: #fff;
@@ -175,8 +186,6 @@
   opacity: 0;
 
   transition: opacity 600ms ease 500ms;
-
-
 
   &::before,
   &::after {
