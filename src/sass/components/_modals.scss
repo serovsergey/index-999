@@ -18,6 +18,11 @@
 }
 
 .modal {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, 50%) scale(1.8);
+
   position: fixed;
   left: 50%;
   top: 50%;
@@ -31,10 +36,10 @@
   border-radius: 4px;
   transition: makeTransition((opacity transform visibility));
 
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-  transform: translate(-50%, 50%) scale(1.8);
+  background-image: url('../images/about/spilledmilk1x-descktop.png');
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
 
   &__title {
     display: block;
@@ -67,3 +72,6 @@
 @import './locations';
 @import './franchise';
 @import './buynow';
+@import './icecream';
+@import './icecoffee';
+@import './milkshakes';

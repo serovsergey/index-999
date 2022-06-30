@@ -1,8 +1,8 @@
-<section class="header">
+<header class="header">
   <div class="container">
     <div class="header__nav">
       <a href="#" class="logo header__logo">
-        <picture>
+        <picture> 
           <source
             srcset="
               ./images/hero-header/logo1x.png 1x,
@@ -23,7 +23,7 @@
             width="199" /></picture
       ></a>
       <nav class="nav" data-menu id="menu-container">
-        <button class="button button--bold">
+        <button class="button button--bold" data-btn-open="buynow">
           Buy now
           <svg class="button__icon" width="10">
             <use href="./images/icons.svg#icon-bracket"></use>
@@ -51,9 +51,9 @@
         data-menu-button
         aria-controls="menu-container"
       >
-        <span class="button__line" aria-expanded="false"></span>
+        <span role="button" class="button__line" aria-expanded="false"></span>
       </button>
-      <button class="button button--bold">
+      <button class="button button--bold" data-btn-open="buynow">
         Buy now
         <svg class="button__icon" width="10">
           <use href="./images/icons.svg#icon-bracket"></use>
@@ -67,8 +67,8 @@
             ice cream made with
             <span class="header__title--accent">passion</span>
           </h1>
-          <a href="#" class="button button--accent">Products</a>
-          <a href="#" class="button">How it’s made?</a>
+          <a href="#products" class="button button--accent">Products</a>
+          <a href="#about" class="button">How it’s made?</a>
         </li>
         <li class="header__item">
           <div class="header__group">
@@ -117,4 +117,4 @@
       </div>
     </div>
   </div>
-</section>
+</header>

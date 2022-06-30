@@ -15,7 +15,7 @@
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
-      background-image: url(../images/hero-header/icecream2x-header-mobile.png);
+      background-image: url("../images/hero-header/icecream2x-header-mobile.png");
       background-repeat: no-repeat;
       background-size: 300px;
       background-position: right bottom;
@@ -82,7 +82,7 @@
 // Navigation menu
 
 .nav {
-  transition: makeTransition(opacity, color);
+  transition: makeTransition((opacity color));
 
   @media screen and (max-width: 767px) {
     position: absolute;
@@ -182,6 +182,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  z-index: 7;
 
   border: none;
   width: 30px;
@@ -269,7 +270,7 @@
 
 .header__nav .button {
   border-radius: 22px;
-  transition: makeTransition(opacity, transform);
+  transition: makeTransition((opacity transform));
 
   @media screen and (max-width: 767px) {
     display: none;

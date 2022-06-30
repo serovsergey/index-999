@@ -14,11 +14,17 @@
     refs.arrModalOpeners.forEach((btn) => {
       btn.addEventListener('click', () => {
         const modalClass = btn.getAttribute('data-btn-open');
+        if (modalClass.length == 0) return;
         refs.backdrop.setAttribute('data-modal', modalClass);
         const modalElement = document.querySelector(`.${modalClass}`);
         if (modalElement)
           modalElement.addEventListener('click', (e) => (e.stopPropagation()));
         document.body.classList.add('no-scroll');
+        if (refs.menuBtn.classList.contains('is-open')) {
+          refs.menuBtn.classList.remove("is-open");
+          refs.menuBtn.setAttribute("aria-expanded", 'false');
+          refs.mobileMenu.classList.remove("is-open");
+        }
       })
     })
     refs.arrBtnClose.forEach(btn => (btn.addEventListener('click', () => {
@@ -34,6 +40,7 @@
     })
 
   function toggleMenu() {
+    if (document.body.clientWidth >= 1280) return;
     const expanded = refs.menuBtn.getAttribute("aria-expanded") == "true" | false;
     refs.menuBtn.classList.toggle("is-open");
     refs.menuBtn.setAttribute("aria-expanded", !expanded);
