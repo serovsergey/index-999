@@ -10,3 +10,291 @@
 
   background-color: $brand-color;
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  border-radius: 20px;
+  padding: 40px;
+
+  max-width: 450px;
+  width: 100%;
+
+  background-color: transparent;
+  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  //   0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: scale(1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+    width: 100%;
+  }
+}
+
+.form__field {
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  color: #fff;
+  color: $text-color;
+  margin-bottom: 10px;
+}
+
+.form__input {
+  display: inline-block;
+  width: 100%;
+  height: 40px;
+
+  font-size: 12px;
+  letter-spacing: 0.02rem;
+
+  padding: 11px 0;
+  padding-left: 40px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  &:focus {
+    border-color: $brand-color;
+    outline: none;
+  }
+
+  &:hover {
+    border-color: $brand-color;
+  }
+}
+
+.form__label {
+  display: inline-block;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: $text-color;
+
+  margin-bottom: 4px;
+
+  .form__field:focus-within & {
+    color: $brand-color;
+  }
+}
+
+.textarea {
+  position: relative;
+}
+
+.textarea__label {
+  display: inline-block;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  color: $text-color;
+
+  margin-bottom: 4px;
+
+  .form__field:focus-within & {
+    color: $brand-color;
+  }
+}
+
+.form__area {
+  display: block;
+  height: 120px;
+  padding: 12px 16px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+
+  resize: none;
+}
+
+.form__icon {
+  display: inline-block;
+  position: absolute;
+
+  top: 55%;
+  left: 14px;
+
+  width: 18px;
+  height: 18px;
+}
+
+.icon {
+  width: 15px;
+  height: 12px;
+
+  .form__field:focus-within & {
+    fill: $brand-color;
+  }
+}
+
+.form__tooltip {
+  color: #fff;
+  border: 1px solid transparent;
+  background-color: $brand-color;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  padding-left: 15px;
+
+  font-size: 12px;
+
+  display: inline-block;
+  position: absolute;
+  top: -60%;
+  left: 30px;
+  min-width: 150px;
+
+  opacity: 0;
+
+  transition: opacity 500ms ease 500ms;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    border: 10px solid transparent;
+    border-top: 10px solid $brand-color;
+  }
+
+  &::after {
+    border-top: 10px solid transparent;
+    bottom: -19px;
+  }
+
+  .form__field:hover & {
+    opacity: 1;
+  }
+}
+
+.form__chekbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+
+  &:focus {
+    border: 1px solid $brand-color;
+  }
+}
+
+// .chekbox__icon {
+//   display: inline-block;
+
+//   width: 15px;
+//   height: 15px;
+
+//   border-radius: 4px;
+
+//   border: 2px solid $text-color;
+
+//   background-color: transparent;
+//   transition: background-color 250ms ease;
+
+//   .chekbox__input:focus ~ & {
+//     border: 1px solid $brand-color;
+//   }
+
+//   .chekbox__input:checked ~ & {
+//     background-color: $brand-color;
+//     border: transparent;
+
+//     background-image: url("");
+//     background-size: contain;
+//     background-repeat: no-repeat;
+//     background-position: center;
+
+//     background-origin: border-box;
+//   }
+// }
+
+.chekbox__text {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  color: $text-color;
+
+  margin-left: 8px;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+
+    color: $text-color;
+
+    margin-left: 8px;
+  }
+}
+.chekbox__text-accent {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-decoration: underline;
+
+  color: $brand-color;
+
+  @media screen and (min-width: 1200px) {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    text-decoration: underline;
+
+    color: $brand-color;
+  }
+}
+
+.form__btn {
+  display: block;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.9;
+  letter-spacing: 0.06em;
+
+  color: $white;
+
+  padding: 10px 56px;
+
+  background-color: $brand-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  cursor: pointer;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    background-color: rgb(18, 18, 18);
+  }
+}
