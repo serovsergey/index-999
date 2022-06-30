@@ -12,6 +12,7 @@
     font-size: 16px;
   }
 }
+
 .contacts .button {
   height: 44px;
   font-weight: 700;
@@ -43,17 +44,14 @@
             color: $white;
             text-align: center;
             border-radius: 4px;    
-        }
-        
+        }        
         .contacts-card:nth-child(2n) &__class{
             background-color: $bg-green;
         }
-
         &__city {
             color: $text-color;
             margin-bottom: 8px;
         }
-
         &__description {
             color: $subtext-color;
             margin-bottom: 24px;
@@ -62,7 +60,6 @@
         }
     }
 }
-
 
 @include breakpointTo(tablet) {
   .contacts {
@@ -76,7 +73,7 @@
     }
     &-card:not(:last-child) {
         margin-bottom: 20px;
-}
+    }
   }
 }
 
@@ -91,7 +88,6 @@
             flex-direction: row;
             bottom: 124px;
             margin: 0;
-
         }
         &-card {
             &__class {
@@ -103,7 +99,6 @@
             &__city {
                 margin-bottom: 12px;
             }
-    
             &__description {
                 line-height: 1.6;
                 margin-bottom: 32px;
@@ -111,11 +106,10 @@
         }
         &-card:not(:last-child) {
             margin-right: 32px;
-    }
+        }
     }
 }
     
-
 @include breakpointFrom(desktop) {
     .contacts {
         &__container {       
@@ -125,14 +119,11 @@
         &__group {
             max-width: 1160px;
             bottom: 225px;
-
         }
         &-card {
-
             &__city {
                 margin-bottom: 8px;
             }
-    
             &__description {
                 line-height: 1.8;
             }
