@@ -7,8 +7,51 @@
 
 .buynow {
   max-width: calc(100% - 20px);
+  background-color: rgba(194, 226, 151, 1);
 
-  background-color: $brand-color;
+  color: $bg-color;
+
+  @include breakpointFrom(mobile) {
+
+    background-image:
+      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-repeat: no-repeat;
+    background-size: 570px;
+    background-position: left 15% bottom;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-header/icecream2x-header-tablet.png');
+      background-repeat: no-repeat;
+      background-size: 370px;
+      background-position: center bottom;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 380px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 528px;
+
+    background-image: url('../images/hero-header/girl1x-tablet.png'),
+      url('../images/hero-header/icecream1x-header-tablet.png');
+    background-repeat: no-repeat;
+    background-size: 140px, 570px;
+    background-position: right bottom, left 15% bottom;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url('../images/hero-header/girl2x-tablet.png'),
+        url('../images/hero-header/icecream2x-header-tablet.png');
+      background-repeat: no-repeat;
+      background-size: 140px, 370px;
+      background-position: right bottom, center bottom;
+    }
+  }
 }
 
 .form {
@@ -16,35 +59,14 @@
   flex-direction: column;
   justify-content: center;
   position: relative;
-  border-radius: 20px;
-  padding: 40px;
-
-  max-width: 450px;
-  width: 100%;
-
-  background-color: transparent;
-  // box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-  //   0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-
-  transform: scale(1);
-  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-  @media screen and (min-width: 1200px) {
-    max-width: 528px;
-    width: 100%;
-  }
+  padding: 20px;
 }
 
 .form__field {
   position: relative;
-
-  display: block;
-  width: 100%;
-
-  color: #fff;
-  color: $text-color;
   margin-bottom: 10px;
+
+  transition: makeTransition((opacity));
 }
 
 .form__input {
@@ -52,14 +74,18 @@
   width: 100%;
   height: 40px;
 
-  font-size: 12px;
+  font-size: 14px;
   letter-spacing: 0.02rem;
+  color: $brand-color;
 
   padding: 11px 0;
   padding-left: 40px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
+  border-radius: 10px;
+
+  transition: makeTransition((border));
+
 
   &:focus {
     border-color: $brand-color;
@@ -75,13 +101,16 @@
   display: inline-block;
 
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.01em;
 
-  color: $text-color;
+  color: $white;
 
   margin-bottom: 4px;
+
+  transition: makeTransition((color));
+
 
   .form__field:focus-within & {
     color: $brand-color;
@@ -93,16 +122,18 @@
 }
 
 .textarea__label {
-  display: inline-block;
+  display: block;
 
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: 0.01em;
-
-  color: $text-color;
+  color: $white;
 
   margin-bottom: 4px;
+
+  transition: makeTransition((color));
+
 
   .form__field:focus-within & {
     color: $brand-color;
@@ -120,27 +151,9 @@
   letter-spacing: 0.01em;
 
   resize: none;
+  margin-bottom: 20px;
 }
 
-.form__icon {
-  display: inline-block;
-  position: absolute;
-
-  top: 55%;
-  left: 14px;
-
-  width: 18px;
-  height: 18px;
-}
-
-.icon {
-  width: 15px;
-  height: 12px;
-
-  .form__field:focus-within & {
-    fill: $brand-color;
-  }
-}
 
 .form__tooltip {
   color: #fff;
@@ -161,7 +174,9 @@
 
   opacity: 0;
 
-  transition: opacity 500ms ease 500ms;
+  transition: opacity 600ms ease 500ms;
+
+
 
   &::before,
   &::after {
@@ -180,93 +195,6 @@
 
   .form__field:hover & {
     opacity: 1;
-  }
-}
-
-.form__chekbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  margin-bottom: 30px;
-
-  &:focus {
-    border: 1px solid $brand-color;
-  }
-}
-
-// .chekbox__icon {
-//   display: inline-block;
-
-//   width: 15px;
-//   height: 15px;
-
-//   border-radius: 4px;
-
-//   border: 2px solid $text-color;
-
-//   background-color: transparent;
-//   transition: background-color 250ms ease;
-
-//   .chekbox__input:focus ~ & {
-//     border: 1px solid $brand-color;
-//   }
-
-//   .chekbox__input:checked ~ & {
-//     background-color: $brand-color;
-//     border: transparent;
-
-//     background-image: url("");
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-
-//     background-origin: border-box;
-//   }
-// }
-
-.chekbox__text {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-
-  color: $text-color;
-
-  margin-left: 8px;
-
-  @media screen and (min-width: 1200px) {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-
-    color: $text-color;
-
-    margin-left: 8px;
-  }
-}
-.chekbox__text-accent {
-  display: inline-block;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 1.2;
-  letter-spacing: 0.03em;
-  text-decoration: underline;
-
-  color: $brand-color;
-
-  @media screen and (min-width: 1200px) {
-    display: inline-block;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.8;
-    letter-spacing: 0.03em;
-    text-decoration: underline;
-
-    color: $brand-color;
   }
 }
 
@@ -292,7 +220,7 @@
 
   cursor: pointer;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: makeTransition((background-color));
 
   &:hover {
     background-color: rgb(18, 18, 18);
