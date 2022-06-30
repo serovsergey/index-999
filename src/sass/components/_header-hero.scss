@@ -23,7 +23,6 @@
   }
 
   @include breakpointFrom(tablet) {
-    height: 100vh;
     overflow: hidden;
 
     background-image: url('../images/hero-header/girl1x-tablet.png'),
@@ -39,7 +38,7 @@
         url('../images/hero-header/icecream2x-header-tablet.png');
       background-repeat: no-repeat;
       background-size: 190px, 370px;
-      background-position: right 10% bottom, center bottom;
+      background-position: right 15% bottom, center bottom;
     }
   }
 
