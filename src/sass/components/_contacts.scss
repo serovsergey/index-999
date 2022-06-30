@@ -1,41 +1,16 @@
 .contacts {
-  background-color: $bg-light;
+    background-color: $bg-light;
 
-  &__container {
-    padding-bottom: 48px;
-  }
-
-  &__group {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    margin-bottom: 32px;
-  }
-
-  &-card {
-    padding: 40px 32px;
-    background: $white;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-
-    &__title {
-      display: inline-block;
-      padding: 0 25px;
-      margin-bottom: 20px;
-      background-color: $bg-cafe;
-      color: $white;
-      text-align: center;
-      border-radius: 4px;
+    &__container {
+        padding-bottom: 48px;
     }
 
-    .contacts-card:nth-child(2n) &__title {
-      background-color: $bg-green;
-    }
-
-    &__city {
-      color: $text-color;
-      margin-bottom: 8px;
+    &__group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+        margin-bottom: 32px;
     }
 
     &-card {
@@ -43,30 +18,56 @@
         background: $white;
         box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
         border-radius: 24px;
-        &__class {
-            display: inline-block;
-            padding: 0 25px;
-            margin-bottom: 20px;
-            background-color: $bg-cafe;
-            color: $white;
-            text-align: center;
-            border-radius: 4px;    
+
+        &__title {
+        display: inline-block;
+        padding: 0 25px;
+        margin-bottom: 20px;
+        background-color: $bg-cafe;
+        color: $white;
+        text-align: center;
+        border-radius: 4px;
         }
-        
-        .contacts-card:nth-child(2n) &__class{
-            background-color: $bg-green;
+
+        .contacts-card:nth-child(2n) &__title {
+        background-color: $bg-green;
         }
 
         &__city {
-            color: $text-color;
-            margin-bottom: 8px;
+        color: $text-color;
+        margin-bottom: 8px;
         }
 
-        &__description {
-            color: $subtext-color;
-            margin-bottom: 24px;
-            line-height: 1.5;
-            letter-spacing: normal;
+        &-card {
+            padding: 40px 32px;
+            background: $white;
+            box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+            border-radius: 24px;
+            &__class {
+                display: inline-block;
+                padding: 0 25px;
+                margin-bottom: 20px;
+                background-color: $bg-cafe;
+                color: $white;
+                text-align: center;
+                border-radius: 4px;    
+            }
+            
+            .contacts-card:nth-child(2n) &__class{
+                background-color: $bg-green;
+            }
+
+            &__city {
+                color: $text-color;
+                margin-bottom: 8px;
+            }
+
+            &__description {
+                color: $subtext-color;
+                margin-bottom: 24px;
+                line-height: 1.5;
+                letter-spacing: normal;
+            }
         }
     }
 }
