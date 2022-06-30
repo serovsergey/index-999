@@ -6,6 +6,7 @@
     backdrop: document.querySelector("[data-modal]"),
     arrBtnClose: document.querySelectorAll(".btn-close"),
     arrMenuItems: document.querySelectorAll(".nav__link"),
+    btnGotoTop: document.querySelector("[data-goto-top]"),
   };
 
   if (refs.menuBtn)
@@ -42,6 +43,14 @@
       item.addEventListener('click', toggleMenu)
     })
 
+  if (refs.btnGotoTop)
+    refs.btnGotoTop.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    })
+
   function toggleMenu() {
     if (window.matchMedia("(min-width: 1280px)").matches) return;
     const expanded = refs.menuBtn.getAttribute("aria-expanded") == "true" | false;
@@ -50,4 +59,12 @@
     refs.mobileMenu.classList.toggle("is-open");
     document.body.classList.toggle("no-scroll");
   }
+
+  window.onscroll = function () {
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+      refs.btnGotoTop.classList.remove('goto-top--hide');
+    } else {
+      refs.btnGotoTop.classList.add('goto-top--hide');
+    }
+  };
 })();
