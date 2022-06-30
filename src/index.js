@@ -14,6 +14,7 @@
     refs.arrModalOpeners.forEach((btn) => {
       btn.addEventListener('click', () => {
         const modalClass = btn.getAttribute('data-btn-open');
+        if (modalClass.length == 0) return;
         refs.backdrop.setAttribute('data-modal', modalClass);
         const modalElement = document.querySelector(`.${modalClass}`);
         if (modalElement)
