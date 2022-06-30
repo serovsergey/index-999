@@ -1,7 +1,3 @@
-.advantages__header {
-    display: none;
-}
-
 .advantages__list {
     display: inline-flex;
     flex-wrap: wrap;
@@ -36,14 +32,14 @@
     &--milk::before {
         width: 33px;
         height: 50px;
-
+        background-image: url(../images/advantages/milk1x.png);
 
     }
 
     &--apple::before {
         width: 50px;
         height: 50px;
-
+        background-image: url(../images/advantages/apple1x.png);
 
     }
 
@@ -51,6 +47,6 @@
         width: 44px;
         height: 50px;
 
-
+        background-image: url(../images/advantages/heart1x.png);
     }
 }
