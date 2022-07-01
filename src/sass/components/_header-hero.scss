@@ -20,11 +20,9 @@
       background-position: right bottom;
     }
   }
-
-
 }
 
-.header__inner{
+.header__inner {
   margin-left: auto;
   margin-right: auto;
 
@@ -65,7 +63,6 @@
       background-position: right bottom, right 38% bottom;
     }
   }
-
 }
 
 .header__nav {
@@ -174,7 +171,6 @@
     color: $brand-color;
   }
 
-
   &:hover {
     color: $brand-color;
   }
@@ -207,6 +203,9 @@
     position: absolute;
     top: 20px;
     right: 20px;
+
+    width: 30px;
+    height: 30px;
   }
 
   @media screen and (min-width: 768px) {
@@ -266,7 +265,7 @@
       &::after {
         content: '';
         transform: rotate(-45deg);
-        bottom: 14px;
+        bottom: 13px;
         left: 3;
 
         background-color: $white;
@@ -286,8 +285,7 @@
 
 .nav.is-open {
   .button {
-    max-width: 207px;
-    width: 100%;
+    width: 209px;
     @media screen and (max-width: 767px) {
       position: absolute;
       top: 60px;
@@ -311,6 +309,10 @@
 .nav.is-open ~ .button {
   @include breakpointFrom(tablet) {
     display: none;
+  }
+
+  @include breakpointFrom(desktop) {
+    display: block;
   }
 }
 
