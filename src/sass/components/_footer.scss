@@ -22,28 +22,8 @@
         letter-spacing: 0.04em;
         text-transform: uppercase;
         color: $brand-color;
-        animation:  changeFooterColor 4000ms infinite alternate;
-    }
-    &__under-icon {
-        fill: $brand-color;
-        transform: rotate(45deg);
     }
 }
-
-@keyframes changeFooterColor {
-    0% {
-        transform: scale(1);
-    }
-    80% {
-        transform: scale(1);
-    }
-    90% {
-        transform: scale(0.9);
-    }
-    100% {
-        transform: scale(1.1);
-    }
-  }
 
 .socials {
     &__list {
@@ -87,10 +67,6 @@
 @include breakpointTo(tablet) {
     .handmade {
         margin-bottom: 40px;
-        &__under-icon {
-            width: 20px;
-            height: 20px;
-        }
     }
     .socials {        
         &__link {
@@ -111,8 +87,7 @@
     .footer__container {
         display: flex;
         justify-content: space-between;
-        padding-left: 18px;
-        padding-right: 18px;
+        margin-bottom: 40px;
     }
     .handmade {
         max-width: 370px;
@@ -126,10 +101,6 @@
             font-size: 58px;
             line-height: 1.14;
             letter-spacing: 0.06em;
-        }
-        &__under-icon {
-            width: 40px;
-            height: 40px;
         }
     }
 
@@ -156,10 +127,10 @@
 
   @include breakpointFrom(desktop) {
     .footer__container {
-        padding-bottom: 60px;
+        margin-bottom: 60px;
     }
     .handmade {
-        max-width: 540px;
+        max-width: 480px;
         &__upper-text {
             margin-bottom: 16px;
         }
