@@ -6,7 +6,11 @@
 }
 
 .recipe {
-  max-width: calc(100% - 20px);
+  // max-width: calc(100% - 20px);
+
+  @include breakpointTo(tablet) {
+    width: 90%;
+  }
 
   &__content {
     height: 50vh;
