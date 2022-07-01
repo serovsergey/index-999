@@ -58,36 +58,8 @@
             line-height: 1.5;
             letter-spacing: normal;
         }
-        
-    }
-    &-card--first {
-        animation: changeContactsCard 20000ms infinite 2000ms;
-    }
-    &-card--second {
-        animation: changeContactsCard 20000ms infinite 8000ms;
-    }
-    &-card--third {
-        animation: changeContactsCard 20000ms infinite 14000ms;
     }
 }
-
-@keyframes changeContactsCard {
-    0% {
-        transform: scale(1);
-    }
-    10% {
-        transform: scale(1.1);
-    }
-    20% {
-        transform: scale(1.1);
-    }
-    30% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(1);
-    }
-  }
 
 @include breakpointTo(tablet) {
   .contacts {
@@ -108,10 +80,11 @@
 @include breakpointFrom(tablet) {
     .contacts {
         &__container {
-            padding: 472px 18px 40px 18px;
+            padding-top: 472px;
+            padding-bottom: 40px;
         }
         &__group {
-            max-width: 732px;
+            max-width: 728px;
             flex-direction: row;
             bottom: 124px;
             margin: 0;
@@ -144,7 +117,7 @@
             padding-bottom: 120px;
         }
         &__group {
-            max-width: 1248px;
+            max-width: 1160px;
             bottom: 225px;
         }
         &-card {
