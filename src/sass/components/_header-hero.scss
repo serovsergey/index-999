@@ -162,6 +162,10 @@
 
   transition: makeTransition(color);
 
+  &--active{
+    color: $brand-color;
+  }
+
   &:hover {
     color: $brand-color;
   }
