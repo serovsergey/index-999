@@ -310,6 +310,10 @@
   @include breakpointFrom(tablet) {
     display: none;
   }
+
+  @include breakpointFrom(desktop) {
+    display: block;
+  }
 }
 
 .nav .button {
