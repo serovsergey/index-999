@@ -21,12 +21,19 @@
     }
   }
 
+
+}
+
+.header__inner{
+  margin-left: auto;
+  margin-right: auto;
+
   @include breakpointFrom(tablet) {
     background-image: url('../images/hero-header/girl1x-tablet.png'),
       url('../images/hero-header/icecream1x-header-tablet.png');
     background-repeat: no-repeat;
     background-size: 190px, 370px;
-    background-position: right 15% bottom, left 65% bottom;
+    background-position: right bottom, left 65% bottom;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -35,7 +42,7 @@
         url('../images/hero-header/icecream2x-header-tablet.png');
       background-repeat: no-repeat;
       background-size: 190px, 370px;
-      background-position: right 15% bottom, left 65% bottom;
+      background-position: right bottom, left 65% bottom;
     }
   }
 
@@ -46,7 +53,7 @@
       url('../images/hero-header/icecream1x-header-descktop.png');
     background-repeat: no-repeat;
     background-size: 304px, 534px;
-    background-position: right 10% bottom, right 38% bottom;
+    background-position: right bottom, right 38% bottom;
 
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
@@ -55,9 +62,10 @@
         url('../images/hero-header/icecream2x-header-descktop.png');
       background-repeat: no-repeat;
       background-size: 304px, 534px;
-      background-position: right 10% bottom, right 38% bottom;
+      background-position: right bottom, right 38% bottom;
     }
   }
+
 }
 
 .header__nav {
@@ -161,6 +169,11 @@
   color: $white;
 
   transition: makeTransition(color);
+
+  &--active {
+    color: $brand-color;
+  }
+
 
   &:hover {
     color: $brand-color;
