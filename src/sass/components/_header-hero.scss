@@ -3,6 +3,7 @@
 .header {
   background-color: $bg-color;
   position: relative;
+  overflow: hidden;
 
   @include breakpointTo(tablet) {
     background-image: url('../images/hero-header/icecream1x-header-mobile.png');
@@ -80,7 +81,7 @@
   transition: makeTransition((opacity color));
 
   @media screen and (max-width: 767px) {
-    position: absolute;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -99,7 +100,7 @@
   }
 
   @media screen and (min-width: 768px) and (max-width: 1279px) {
-    position: absolute;
+    position: fixed;
     z-index: 3;
     top: 0;
     left: 0;
@@ -209,7 +210,7 @@
     z-index: 6;
 
     width: 24px;
-    height: 1px;
+    height: 2px;
     background-color: $brand-color;
     transition: makeTransition(color, opacity);
 
@@ -218,7 +219,7 @@
       content: '';
       position: absolute;
       width: 24px;
-      height: 1px;
+      height: 2px;
 
       background-color: $brand-color;
       transition: all 0.4s;
