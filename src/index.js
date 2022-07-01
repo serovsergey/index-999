@@ -21,10 +21,12 @@
         if (modalElement)
           modalElement.addEventListener('click', (e) => (e.stopPropagation()));
         document.body.classList.add('no-scroll');
+
         if (refs.menuBtn.classList.contains('is-open')) {
           refs.menuBtn.classList.remove("is-open");
           refs.menuBtn.setAttribute("aria-expanded", 'false');
           refs.mobileMenu.classList.remove("is-open");
+          document.body.classList.remove("menu-opened");
         }
       })
     })
@@ -58,6 +60,7 @@
     refs.menuBtn.setAttribute("aria-expanded", !expanded);
     refs.mobileMenu.classList.toggle("is-open");
     document.body.classList.toggle("no-scroll");
+    document.body.classList.toggle("menu-opened");
   }
 
   window.onscroll = function () {
@@ -67,4 +70,14 @@
       refs.btnGotoTop.classList.add('goto-top--hide');
     }
   };
+
 })();
+
+$('.reviews__slider').slick({
+  dots: true,
+  arrows: false,
+  adaptiveHeight: true,
+  customPaging: function (slider, i) {
+    return '<div class="sl-link"></div>';
+  },
+});

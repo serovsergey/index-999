@@ -100,17 +100,16 @@
     transform: translateY(-50%);
     width: 16px;
     height: 16px;
-    fill: $alternate-accent-color;
-    border: 2px solid $brand-color;
+    fill: $bg-light;
+    border-style: solid;
+    border-color: $brand-color;
+    border-width: 2px;
     border-radius: 2px;
     transition: makeTransition((fill background border-color));
   }
 
   &__input:checked + &__check {
-    fill: $bg-light;
-    background-color: $bg-light;
-    border-color: $brand-color;
-    border-width: 2px;
+    fill: $alternate-accent-color;
   }
 }
 
