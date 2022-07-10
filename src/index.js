@@ -78,6 +78,6 @@ $('.reviews__slider').slick({
   arrows: false,
   adaptiveHeight: true,
   customPaging: function (slider, i) {
-    return '<div class="sl-link"></div>';
+    return '<button class="sl-link"><div class="sl-inner"></div></button>';
   },
 });
